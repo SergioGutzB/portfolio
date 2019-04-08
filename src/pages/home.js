@@ -2,6 +2,7 @@ import React from "react"
 import "fullpage.js/vendors/scrolloverflow"
 import ReactFullpage from "@fullpage/react-fullpage"
 import Hero from "../components/sections/hero"
+import Omnibnk from "../components/sections/omnibnk"
 import styled from "styled-components"
 
 const anchors = ["firstPage", "secondPage", "thirdPage"]
@@ -11,11 +12,10 @@ const fullpageOptions = {
   sectionsColor: ["#0f1c40", "#f0d617", "#0798ec"],
   callbacks: ["onLeave"],
   scrollOverflow: true,
-  anchors: anchors,
   navigation: true,
   navigationTooltips: anchors,
   onLeave: (origin, destination, direction) => {
-    console.log("onLeave event", { origin, destination, direction })
+    // console.log("onLeave event", { origin, destination, direction })
   },
 }
 
@@ -29,20 +29,20 @@ class App extends React.Component {
       <ReactFullpage
         {...fullpageOptions}
         render={({ state, fullpageApi }) => {
-          console.log("state: ", state)
-          const { initialized, destination, sectionCount } = state
-          const show = initialized && destination ? state.destination.index + 1 : 0
-          console.log("show: ", show)
+          const { initialized, destination} = state
+          const show =
+            initialized && destination ? state.destination.index + 1 : 0
 
           return initialized ? (
             <Fullpage id="fullpage-wrapper">
               <Hero section={show} index={1} />
-              <Hero section={show} index={2} />
+              <Omnibnk section={show} index={2} />
               <Hero section={show} index={3} />
+              <Hero section={show} index={4} />
             </Fullpage>
           ) : (
             <Fullpage id="fullpage-wrapper">
-              <div className="section"></div>
+              <div className="section" />
             </Fullpage>
           )
         }}
