@@ -4,12 +4,15 @@ import styled from "styled-components"
 
 const CardDiv = styled.div`
   margin: 0 0 0 auto;
-  height: 74.81%;
-  width: 60%;
+  height: 60%;
+  width: 70%;
   box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
   background-color: #4d4d4d;
   position: relative;
   overflow: hidden;
+  background: ${props => (props.image ? `url(${props.image})` : "")};
+  background-size: cover;
+  background-position: left center;
 `
 
 const Cover = styled.div`
@@ -21,7 +24,6 @@ const Cover = styled.div`
   background: #ff4d5a;
   transform: translate3d(100%, 0, 0);
 `
-
 const CoverBlue = styled(Cover)`
   background: #072142;
 `
@@ -47,10 +49,10 @@ function Card(props) {
       }}
     >
       {props => (
-        <CardDiv style={{ transform: props.transform1 }}>
+        <CardDiv style={{ transform: props.transform1 }} image={imageUrl}>
           <div>
             <Cover style={{ transform: props.transform2 }} />
-            <CoverBlue style={{ transform: props.transform3}} />
+            <CoverBlue style={{ transform: props.transform3 }} />
           </div>
         </CardDiv>
       )}

@@ -12,8 +12,8 @@ const Bar = styled.span`
   margin-top: 10px;
 `
 
-const BarContainer = styled.span`
-  margin: 20px 0px;
+const BarContainer = styled.div`
+  padding: 25px 0px;
   text-align: center;
 `
 

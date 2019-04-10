@@ -8,6 +8,7 @@ import Card from '../card'
 import RaisedButton from '../button'
 import { Section } from '../../styles/global'
 
+
 const ContainerFloat = styled.div`
   position: absolute;
   width: 50%;
@@ -25,9 +26,9 @@ class Omnibnk extends React.Component {
           <ContainerFloat>
             <Titletext {...props} />
             <Bars isVisible={isVisible}/>
-            <SubTitleText text='Fintech' isVisible={isVisible} delay={530} />
-            <SubTitleText text='website' isVisible={isVisible} delay={560} />
-            <RaisedButton text='Show me more' isVisible={isVisible} delay={590} />
+            <SubTitleText text='Fintech' isVisible={isVisible} delay={600} />
+            <SubTitleText text='website' isVisible={isVisible} delay={700} />
+            <RaisedButton text='Show me more' isVisible={isVisible} delay={700} />
           </ContainerFloat>
         </Section>
       </div>
@@ -41,3 +42,4 @@ Omnibnk.propTypes = {
 }
 
 export default Omnibnk
+

@@ -40,9 +40,15 @@ const Portfolio = styled.h3`
 `
 
 class Hero extends React.Component {
+  state = {
+    isVisible: false,
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({isVisible: nextProps.index === nextProps.section ? true : false})
+  }
   render() {
-    const { section, index } = this.props
-    const isVisible = section === index ? true : false
+    const {isVisible} = this.state
     return (
       <div className="section">
         <Section>

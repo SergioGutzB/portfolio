@@ -4,9 +4,9 @@ import styled from "styled-components"
 
 const SubText = styled.div`
   font-size: 8rem;
-  font-family: inherit;
+  font-family: "Roboto";
   letter-spacing: 0.1em;
-  font-weight: 600;
+  font-weight: 300;
   margin: 0px;
   line-height: 1;
   font-size: 3rem;
@@ -23,7 +23,7 @@ function SubTitleText(props) {
       }}
       to={{
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "translateX(0)" : "translateX(-400px)",
+        transform: isVisible ? "translateX(0)" : "translateX(-300px)",
       }}
     >
       {props => <SubText style={props}>{text}</SubText>}
