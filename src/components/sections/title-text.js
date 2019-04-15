@@ -18,11 +18,10 @@ class Titletext extends React.Component {
       <Spring
         config={{
           clamp: false,
-          friction: 38,
+          friction: 30,
         }}
         delay={delay ? delay : 500}
         to={{
-          opacity: isVisible ? 1 : 0,
           transform: isVisible ? "translateX(0)" : "translateX(-700px)",
         }}
       >

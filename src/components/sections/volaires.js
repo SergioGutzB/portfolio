@@ -6,10 +6,15 @@ import Bars from '../Bars'
 import SubTitleText from '../subTitleText'
 import Card from '../card'
 import RaisedButton from '../button'
-import { Section, ContainerFloat } from '../../styles/global'
+import { Section } from '../../styles/global'
 
 
-class Omnibnk extends React.Component {
+const ContainerFloat = styled.div`
+  position: absolute;
+  width: 50%;
+`
+
+class Volaires extends React.Component {
   render() {
     const { section, index } = this.props
     const isVisible = section === index ? true : false
@@ -17,13 +22,13 @@ class Omnibnk extends React.Component {
     return (
       <div className="section">
         <Section>
-          <Card isVisible={isVisible} imageUrl=""/>
+          <Card isVisible={isVisible} imageUrl="https://s3.amazonaws.com/sergiogutzb-portfolio2/assets/omnibnk-login.png"/>
           <ContainerFloat>
-            <Titletext {...props} />
+            <Titletext text="Volaires" isVisible={isVisible} delay={500} />
             <Bars isVisible={isVisible}/>
-            <SubTitleText text='Fintech' isVisible={isVisible} delay={530} />
-            <SubTitleText text='website' isVisible={isVisible} delay={560} />
-            <RaisedButton text='Show me more' isVisible={isVisible} delay={590} url='/omnibnk/' />
+            <SubTitleText text='Marketplace' isVisible={isVisible} delay={600} />
+            <SubTitleText text='website' isVisible={isVisible} delay={700} />
+            <RaisedButton text='Show me more' isVisible={isVisible} delay={700} url='/omnibnk/'/>
           </ContainerFloat>
         </Section>
       </div>
@@ -31,9 +36,12 @@ class Omnibnk extends React.Component {
   }
 }
 
-Omnibnk.propTypes = {
+Volaires.propTypes = {
   index: PropTypes.number,
   section: PropTypes.number,
+  delay: PropTypes.number
 }
 
-export default Omnibnk
+export default Volaires
+
+

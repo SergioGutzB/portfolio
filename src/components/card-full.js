@@ -3,9 +3,8 @@ import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
 
 const CardDiv = styled.div`
-  margin: 0 0 0 auto;
-  height: 74%;
-  width: 65.9%;
+  margin-left: auto;
+  margin-right: 0px;
   box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
   background-color: #4d4d4d;
   position: relative;
@@ -29,33 +28,25 @@ const CoverBlue = styled(Cover)`
 `
 
 function Card(props) {
-  const { isVisible, imageUrl } = props
+  const { imageUrl } = props
   return (
     <Spring
       config={{
         clamp: true,
-        friction: 70,
+        friction: 40,
+      }}
+      from={{
+        "marginRight": "0",
+        height: "74%",
+        width: "65.9%",
       }}
       to={{
-        transform1: isVisible
-          ? "translate(0, 0) scale(1)"
-          : "translate(10%, 0) scale(0.82)",
-        transform2: isVisible
-          ? "translateX(110%) translateZ(0px)"
-          : "translateX(-100%) translateZ(0px)",
-        transform3: isVisible
-          ? "translateX(160%) translateZ(0px)"
-          : "translateX(-40%) translateZ(0px)",
+        "marginRight": "-100px",
+        height: "100%",
+        width: "74.3%",
       }}
     >
-      {props => (
-        <CardDiv style={{ transform: props.transform1 }} image={imageUrl}>
-          <div>
-            <Cover style={{ transform: props.transform2 }} />
-            <CoverBlue style={{ transform: props.transform3 }} />
-          </div>
-        </CardDiv>
-      )}
+      {props => <CardDiv style={props} image={imageUrl} />}
     </Spring>
   )
 }

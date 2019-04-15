@@ -5,11 +5,13 @@ import Hero from "../components/sections/hero"
 import Omnibnk from "../components/sections/omnibnk"
 import styled from "styled-components"
 import HeaderFixed from "../components/header-fixed"
+import ElBanderin from '../components/sections/elbanderin'
+import Volaires from '../components/sections/volaires'
 
-const anchors = ["firstPage", "secondPage", "thirdPage"]
+const anchors = ["hero", "omnibnk", "elbanderin", "volaires"]
 const fullpageOptions = {
   licenseKey: "F03741B9-DB594A2F-8DCD815F-57D360E2",
-  anchors: ["firstPage", "secondPage", "thirdPage"],
+  anchors,
   callbacks: ["onLeave"],
   scrollOverflow: true,
   navigation: true,
@@ -43,8 +45,8 @@ const App = () => (
           <Fullpage id="fullpage-wrapper">
             <Hero section={show} index={1} />
             <Omnibnk section={show} index={2} />
-            <Hero section={show} index={3} />
-            <Hero section={show} index={4} />
+            <ElBanderin section={show} index={3} />
+            <Volaires section={show} index={4} />
           </Fullpage>
         )
       }}

@@ -5,19 +5,8 @@ import styled from "styled-components"
 import Bars from "../Bars"
 import Titletext from "../sections/title-text"
 import SubTitleText from "../subTitleText"
+import { Section } from '../../styles/global'
 
-const Section = styled.section`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: calc(100vw - 200px);
-  padding: 0 100px;
-  height: 100vh;
-  color: white;
-  overflow: hidden;
-  position: relative;
-`
 
 const Row = styled.div`
   display: flex;

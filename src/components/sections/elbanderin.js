@@ -14,7 +14,7 @@ const ContainerFloat = styled.div`
   width: 50%;
 `
 
-class Omnibnk extends React.Component {
+class ElBanderin extends React.Component {
   render() {
     const { section, index } = this.props
     const isVisible = section === index ? true : false
@@ -24,11 +24,11 @@ class Omnibnk extends React.Component {
         <Section>
           <Card isVisible={isVisible} imageUrl="https://s3.amazonaws.com/sergiogutzb-portfolio2/assets/omnibnk-login.png"/>
           <ContainerFloat>
-            <Titletext {...props} />
+            <Titletext text="El Banderín" isVisible={isVisible} delay={500} />
             <Bars isVisible={isVisible}/>
-            <SubTitleText text='Fintech' isVisible={isVisible} delay={600} />
+            <SubTitleText text='Fútbol' isVisible={isVisible} delay={600} />
             <SubTitleText text='website' isVisible={isVisible} delay={700} />
-            <RaisedButton text='Show me more' isVisible={isVisible} delay={700} />
+            <RaisedButton text='Show me more' isVisible={isVisible} delay={700} url='/omnibnk/'/>
           </ContainerFloat>
         </Section>
       </div>
@@ -36,10 +36,11 @@ class Omnibnk extends React.Component {
   }
 }
 
-Omnibnk.propTypes = {
+ElBanderin.propTypes = {
   index: PropTypes.number,
   section: PropTypes.number,
+  delay: PropTypes.number
 }
 
-export default Omnibnk
+export default ElBanderin
 
