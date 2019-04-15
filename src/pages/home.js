@@ -1,12 +1,11 @@
 import React from "react"
-import "fullpage.js/vendors/scrolloverflow"
 import ReactFullpage from "@fullpage/react-fullpage"
 import Hero from "../components/sections/hero"
 import Omnibnk from "../components/sections/omnibnk"
 import styled from "styled-components"
 import HeaderFixed from "../components/header-fixed"
-import ElBanderin from '../components/sections/elbanderin'
-import Volaires from '../components/sections/volaires'
+import ElBanderin from "../components/sections/elbanderin"
+import Volaires from "../components/sections/volaires"
 
 const anchors = ["hero", "omnibnk", "elbanderin", "volaires"]
 const fullpageOptions = {
@@ -31,27 +30,30 @@ const Linear = styled.div`
   background-image: linear-gradient(to bottom, #103057 0%, #0c1625 100%);
 `
 
-const App = () => (
-  <Linear>
-    <HeaderFixed />
-    <ReactFullpage
-      {...fullpageOptions}
-      render={({ state, fullpageApi }) => {
-        const { initialized, destination } = state
-        console.log('state: ', state)
-        const show = destination ? destination.index + 1 : 1
-
-        return (
-          <Fullpage id="fullpage-wrapper">
-            <Hero section={show} index={1} />
-            <Omnibnk section={show} index={2} />
-            <ElBanderin section={show} index={3} />
-            <Volaires section={show} index={4} />
-          </Fullpage>
-        )
-      }}
-    />
-  </Linear>
-)
+class App extends React.Component {
+  
+  render() {
+    return (
+      <Linear>
+        <HeaderFixed />
+        <ReactFullpage
+          {...fullpageOptions}
+          render={({ state, fullpageApi }) => {
+            const { initialized, destination } = state
+            const show = destination ? destination.index + 1 : 1
+            return (
+              <Fullpage id="fullpage-wrapper">
+                <Hero section={show} index={1} />
+                <Omnibnk section={show} index={2} />
+                <ElBanderin section={show} index={3} />
+                <Volaires section={show} index={4} />
+              </Fullpage>
+            )
+          }}
+        />
+      </Linear>
+    )
+  }
+}
 
 export default App
