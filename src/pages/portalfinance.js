@@ -110,15 +110,14 @@ const SectionIcons = styled.section`
   justify-content: center;
 `
 
-const SectionIframes = styled.section`
+const SectionFullPage = styled.section`
   width: 100%;
-  padding: 0 0 140px;
-  background-color: #f2f4f5;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 720px;
+  min-height: 700px;
+  height: auto;
 `
 
 const ImageIcon = styled.div`
@@ -149,7 +148,7 @@ class App extends React.Component {
       <Wrapper>
         <HeaderFixed />
         <ButtonBack
-          url="/#omnibnk"
+          url="/#portalfinance"
           style={{
             position: "fixed",
             top: "122px",
@@ -157,9 +156,9 @@ class App extends React.Component {
           }}
         />
         <Section right style={{ backgroundColor: "#020b16" }}>
-          <CardFull isVisible={true} imageUrl="perspective-omni.png" />
+          <CardFull isVisible={true} imageUrl="perspective-portal.png" />
           <ContainerFloat style={{ marginTop: "-41px" }}>
-            <Titletext text="Omni|Bnk" isVisible={true} />
+            <Titletext text="PortalFinance" isVisible={true} />
             <Bars isVisible={true} />
             <SubTitleText text="Fintech" isVisible={true} delay={530} />
             <SubTitleText text="website" isVisible={true} delay={560} />
@@ -172,22 +171,22 @@ class App extends React.Component {
             <SubTitle>DATE</SubTitle>
             <SubTitle>OVERVIEW</SubTitle>
             <Text>Front-End Developer</Text>
-            <Text>SEP 2017 - NOW</Text>
-            <Text>Plataforma financiera para hacer factoring y confirming</Text>
+            <Text>DIC 2017</Text>
+            <Text>PortalFinance - Landing Page</Text>
           </SectionHeader>
           <ImageFull
             style={{ width: "calc(100% - 100px)", margin: "50px auto" }}
           >
-            <Image filename="mockup-omni.png" style={{ marginTop: "10px" }} />
+            <Image
+              filename="mockup-portalfinance.png"
+              style={{ marginTop: "10px" }}
+            />
           </ImageFull>
           <SectionText>
             <Title>Features</Title>
             <div>
               <Text style={{ padding: "0px 60px 0 30px", fontStyle: "italic" }}>
-                "Somos la primera plataforma digital de soluciones financieras
-                de Latinoamérica, para empresas, que cambio las reglas a través
-                de un financiamiento rápido, transparente y con toda la libertad
-                que siempre quisiste".
+                PortalFinance Landing Page
               </Text>
               <Text style={{ padding: "0px 60px 0 30px", fontStyle: "italic" }}>
                 - Profiles: Financial, Supplier, Allied Debtor
@@ -195,58 +194,63 @@ class App extends React.Component {
             </div>
           </SectionText>
           <ImageFull>
-            <Image filename="perspective-omni.png" alt="Perpesctive Omni|Bnk" />
+            <Image
+              filename="perspective-portal.png"
+              alt="Perpesctive Omni|Bnk"
+            />
           </ImageFull>
           <SectionText>
             <Title>Development</Title>
-            <Text style={{ padding: "0px 60px 0 30px" }}>
-              Plataforma web SPA desarrollada con Angular 6 junto con Ngrx
-              (Redux) para administrar nuestros datos de aplicación. Apoyamos
-              nuestra hoja de estilos sobre Angular Material para agilizar el
-              desarollo, no reinventamos la rueda.
-            </Text>
+            <div>
+              <Text style={{ padding: "0px 60px 0 30px" }}>
+                Landing page en tiempo record (2 días) para demos con los
+                inversionistas. Es una sitio web con una sola pagina con scroll
+                que muestra información descriptiva de los servicio que ofrece la compañia.
+              </Text>
+              <Text style={{ padding: "0px 60px 0 30px" }}>
+                Se uso React pasa su desarrollo por la simplicidad de crear
+                componentes y con un segundo propposito de dar a conocer al
+                equipo de Front-End lo rápido y facil que es crear aplicaciones
+                con react.
+              </Text>
+            </div>
           </SectionText>
           <SectionIcons>
             <ImageIcon>
-              <Image filename="logos/angular6.png" alt="Angular 6 Omni|Bnk" />
+              <Image filename="logos/react.png" alt="React Omni|Bnk" />
             </ImageIcon>
             <ImageIcon>
-              <Image filename="logos/ngrx" alt="Ngrx Omni|Bnk" />
+              <Image filename="logos/sass.png" alt="Sass Omni|Bnk" />
             </ImageIcon>
             <ImageIcon>
-              <Image filename="logos/redux.png" alt="Ngrx Omni|Bnk" />
+              <Image filename="logos/webpack.png" alt="Webpack Omni|Bnk" />
             </ImageIcon>
             <ImageIcon>
-              <Image filename="logos/sass.png" alt="Ngrx Omni|Bnk" />
+              <Image filename="logos/lambda.png" alt="Lambda Omni|Bnk" />
             </ImageIcon>
             <ImageIcon>
-              <Image filename="logos/webpack.png" alt="Ngrx Omni|Bnk" />
-            </ImageIcon>
-            <ImageIcon>
-              <Image filename="logos/karma.png" alt="Ngrx Omni|Bnk" />
-            </ImageIcon>
-            <ImageIcon>
-              <Image filename="logos/jasmine.png" alt="Ngrx Omni|Bnk" />
-            </ImageIcon>
-            <ImageIcon>
-              <Image filename="logos/lambda.png" alt="Ngrx Omni|Bnk" />
-            </ImageIcon>
-            <ImageIcon>
-              <Image filename="logos/serverless.png" alt="Ngrx Omni|Bnk" />
+              <Image filename="logos/serverless.png" alt="Serverless Omni|Bnk" />
             </ImageIcon>
           </SectionIcons>
-          <SectionIframes>
-            <Iframe src="https://landing-omnibnk.netlify.com/" />
-          </SectionIframes>
+          <div
+            style={{
+              width: "100%",
+              backgroundColor: "#f2f4f5",
+              padding: "10px 0 140px",
+            }}
+          >
+            <ImageFull style={{ width: "60%", margin: "50px auto" }}>
+              <Image
+                filename="portalfinance-page.png"
+                alt="Portal Finance Full Page"
+              />
+            </ImageFull>
+          </div>
           <SectionText>
             <Title>Tasks</Title>
             <div style={{ padding: "0px 60px 0 30px" }}>
               <Text>
-                - Crear, diseñar, modificar templates Angular Material
-              </Text>
-              <Text>
-                - Desarrollar, diseñar e implementar components, layouts and
-                views
+                - Desarrollar, diseñar e implementar components, layout and animations
               </Text>
               <Text>
                 - Desarrollar, deplegar landing pages SPA (React - HTML -
@@ -255,7 +259,7 @@ class App extends React.Component {
             </div>
           </SectionText>
           <FooterBack>
-            <ButtonBackBlack url="/#omnibnk" text="BACK" />
+            <ButtonBackBlack url="/#portalfinance" text="BACK" />
           </FooterBack>
         </SectionPage>
       </Wrapper>

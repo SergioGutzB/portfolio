@@ -2,12 +2,13 @@ import React from "react"
 import ReactFullpage from "@fullpage/react-fullpage"
 import Hero from "../components/sections/hero"
 import Omnibnk from "../components/sections/omnibnk"
+import PortalFinance from "../components/sections/portalfinance"
 import styled from "styled-components"
 import HeaderFixed from "../components/header-fixed"
 import ElBanderin from "../components/sections/elbanderin"
 import Volaires from "../components/sections/volaires"
 
-const anchors = ["hero", "omnibnk", "elbanderin", "volaires"]
+const anchors = ["hero", "omnibnk", "portalfinance", "elbanderin", "volaires"]
 const fullpageOptions = {
   licenseKey: "F03741B9-DB594A2F-8DCD815F-57D360E2",
   anchors,
@@ -45,8 +46,9 @@ class App extends React.Component {
               <Fullpage id="fullpage-wrapper">
                 <Hero section={show} index={1} />
                 <Omnibnk section={show} index={2} />
-                <ElBanderin section={show} index={3} />
-                <Volaires section={show} index={4} />
+                <PortalFinance section={show} index={3} />
+                <ElBanderin section={show} index={4} />
+                <Volaires section={show} index={5} />
               </Fullpage>
             )
           }}
