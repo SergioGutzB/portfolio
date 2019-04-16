@@ -18,3 +18,14 @@ export const ContainerFloat = styled.div`
   position: absolute;
   width: 50%;
 `
+
+
+export const Filter = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #852977;
+  opacity: 0.3;
+`

@@ -1,6 +1,8 @@
 import React from "react"
 import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
+import { Filter } from "../styles/global"
+import Image from "./image"
 
 const CardDiv = styled.div`
   margin-left: auto;
@@ -9,9 +11,6 @@ const CardDiv = styled.div`
   background-color: #4d4d4d;
   position: relative;
   overflow: hidden;
-  background: ${props => (props.image ? `url(${props.image})` : "")};
-  background-size: cover;
-  background-position: left center;
 `
 
 const Cover = styled.div`
@@ -36,17 +35,31 @@ function Card(props) {
         friction: 40,
       }}
       from={{
-        "marginRight": "0",
+        marginRight: "0",
         height: "74%",
         width: "65.9%",
       }}
       to={{
-        "marginRight": "-100px",
+        marginRight: "-100px",
         height: "100%",
         width: "74.3%",
       }}
     >
-      {props => <CardDiv style={props} image={imageUrl} />}
+      {props => (
+        <CardDiv style={props}>
+          <Image
+            filename={imageUrl}
+            styles={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+              width: "100%",
+              height: "100%",
+            }}
+          />
+          <Filter />
+        </CardDiv>
+      )}
     </Spring>
   )
 }

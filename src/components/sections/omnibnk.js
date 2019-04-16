@@ -17,7 +17,7 @@ class Omnibnk extends React.Component {
     return (
       <div className="section">
         <Section>
-          <Card isVisible={isVisible} imageUrl=""/>
+          <Card isVisible={isVisible} imageUrl="perspective-omni.png"/>
           <ContainerFloat>
             <Titletext {...props} />
             <Bars isVisible={isVisible}/>

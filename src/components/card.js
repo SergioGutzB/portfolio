@@ -1,6 +1,8 @@
 import React from "react"
 import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
+import Image from "./image"
+import { Filter } from "../styles/global" 
 
 const CardDiv = styled.div`
   margin: 0 0 0 auto;
@@ -10,7 +12,6 @@ const CardDiv = styled.div`
   background-color: #4d4d4d;
   position: relative;
   overflow: hidden;
-  background: ${props => (props.image ? `url(${props.image})` : "")};
   background-size: cover;
   background-position: left center;
 `
@@ -49,7 +50,18 @@ function Card(props) {
       }}
     >
       {props => (
-        <CardDiv style={{ transform: props.transform1 }} image={imageUrl}>
+        <CardDiv style={{ transform: props.transform1 }}>
+          <Image
+            filename={imageUrl}
+            styles={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+              width: "100%",
+              height: "100%",
+            }}
+          />
+          <Filter />
           <div>
             <Cover style={{ transform: props.transform2 }} />
             <CoverBlue style={{ transform: props.transform3 }} />

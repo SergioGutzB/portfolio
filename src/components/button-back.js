@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import Arrowleft from "../assets/result.svg"
+import Arrowleft from "../assets/left-white.svg"
 import Link from "gatsby-link"
 import { Spring } from "react-spring/renderprops"
 
 const Arrow = styled.div`
   width: 64px;
-  transition: transform 0.2s;
+  transition:All 0.3s ease-out;
   z-index: 2020;
   position: fixed;
   top: 122px;

@@ -4,6 +4,7 @@ import HeaderFixed from "../components/header-fixed"
 import CardFull from "../components/card-full"
 import { Section } from "../styles/global"
 import ButtonBack from "../components/button-back"
+import ButtonBackBlack from "../components/button-back-black"
 import Titletext from "../components/sections/title-text"
 import Bars from "../components/Bars"
 import SubTitleText from "../components/subTitleText"
@@ -102,11 +103,6 @@ const SectionIcons = styled.section`
   padding: 140px 0px;
   background-color: #f2f4f5;
   display: grid;
-  /* flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
-  position: relative; */
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 30px;
   align-items: center;
@@ -119,14 +115,31 @@ const ImageIcon = styled.div`
   margin: 0 auto;
 `
 
+const FooterBack = styled.footer`
+  width: 100%;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+  height: 380px;
+  background-color: #f2f4f5;
+`
+
 class App extends React.Component {
   render() {
     return (
       <Wrapper>
         <HeaderFixed />
-        <ButtonBack url="/home#omnibnk" />
+        <ButtonBack
+          url="/#omnibnk"
+          style={{
+            position: "fixed",
+            top: "122px",
+            left: "42px",
+          }}
+        />
         <Section right style={{ backgroundColor: "#020b16" }}>
-          <CardFull isVisible={true} imageUrl="" />
+          <CardFull isVisible={true} imageUrl="perspective-omni.png" />
           <ContainerFloat style={{ marginTop: "-41px" }}>
             <Titletext text="Omni|Bnk" isVisible={true} />
             <Bars isVisible={true} />
@@ -164,7 +177,7 @@ class App extends React.Component {
             </div>
           </SectionText>
           <ImageFull>
-            <Image filename="perspective.png" alt="Perpesctive Omni|Bnk" />
+            <Image filename="perspective-omni.png" alt="Perpesctive Omni|Bnk" />
           </ImageFull>
           <SectionText>
             <Title>Development</Title>
@@ -208,14 +221,21 @@ class App extends React.Component {
             <Title>Tasks</Title>
             <div style={{ padding: "0px 60px 0 30px" }}>
               <Text>
-                - Crear, diseñar, modificar templates Angular Material{" "}
+                - Crear, diseñar, modificar templates Angular Material
               </Text>
               <Text>
                 - Desarrollar, diseñar e implementar components, layouts and
                 views
               </Text>
+              <Text>
+                - Desarrollar, deplegar landing pages SPA (React - HTML -
+                Javascript)
+              </Text>
             </div>
           </SectionText>
+          <FooterBack>
+            <ButtonBackBlack url="/#omnibnk" text="BACK" />
+          </FooterBack>
         </SectionPage>
       </Wrapper>
     )
