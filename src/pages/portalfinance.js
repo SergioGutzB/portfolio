@@ -156,7 +156,7 @@ class App extends React.Component {
           }}
         />
         <Section right style={{ backgroundColor: "#020b16" }}>
-          <CardFull isVisible={true} imageUrl="perspective-portal.png" />
+          <CardFull isVisible={true} imageUrl="portalfinance/background.jpg" />
           <ContainerFloat style={{ marginTop: "-41px" }}>
             <Titletext text="PortalFinance" isVisible={true} />
             <Bars isVisible={true} />

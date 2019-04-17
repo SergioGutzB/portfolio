@@ -17,7 +17,7 @@ class PortalFinance extends React.Component {
     return (
       <div className="section">
         <Section>
-          <Card isVisible={isVisible} imageUrl="perspective-portal.png"/>
+          <Card isVisible={isVisible} imageUrl="portalfinance/background.jpg"/>
           <ContainerFloat>
             <Titletext {...props} />
             <Bars isVisible={isVisible}/>

@@ -11,6 +11,7 @@ const CardDiv = styled.div`
   background-color: #4d4d4d;
   position: relative;
   overflow: hidden;
+  width: 72.5%;
 `
 
 const Cover = styled.div`
@@ -36,13 +37,11 @@ function Card(props) {
       }}
       from={{
         marginRight: "0",
-        height: "74%",
-        width: "65.9%",
+        height: "74.2%",
       }}
       to={{
         marginRight: "-100px",
         height: "100%",
-        width: "74.3%",
       }}
     >
       {props => (

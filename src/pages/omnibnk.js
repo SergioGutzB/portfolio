@@ -14,7 +14,7 @@ import Image from "../components/image"
 const Linear = styled.div`
   max-height: 100vh;
   max-width: 100vw;
-  background-image: linear-gradient(to bottom, #103057 0%, #0c1625 100%);
+  background-image: linear-gradient(to bottom, #072142, #061c37, #07182b, #061220, #020b16);
 `
 const Wrapper = styled.div`
   width: 100%;

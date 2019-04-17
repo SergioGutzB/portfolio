@@ -1,6 +1,7 @@
 import React from "react"
 import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
+import TextMenu from "./text-menu"
 
 const Header = styled.header`
   top: 0;
@@ -26,9 +27,11 @@ const Nav = styled.div`
   top: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  overflow: hidden;
 `
 
 const MenuIcon = styled.div`
@@ -92,7 +95,11 @@ class HeaderFixed extends React.Component {
           }}
         >
           {props => {
-            return <Nav style={{ height: `${props.height}vh` }} />
+            return <Nav style={{ height: `${props.height}vh` }}>
+              <TextMenu text="Home" isVisible={open} url="/"/>
+              <TextMenu text="Omni|Bnk" isVisible={open} url="/#omnibnk"/>
+              <TextMenu text="PortalFinance" isVisible={open} url="/#portalfinance" />
+            </Nav>
           }}
         </Spring>
       </Header>
