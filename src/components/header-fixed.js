@@ -83,6 +83,7 @@ class HeaderFixed extends React.Component {
 
   render() {
     const { open } = this.state
+    const toggle = this.toggle
     return (
       <Header>
         <Wrap>
@@ -96,9 +97,9 @@ class HeaderFixed extends React.Component {
         >
           {props => {
             return <Nav style={{ height: `${props.height}vh` }}>
-              <TextMenu text="Home" isVisible={open} url="/"/>
-              <TextMenu text="Omni|Bnk" isVisible={open} url="/#omnibnk"/>
-              <TextMenu text="PortalFinance" isVisible={open} url="/#portalfinance" />
+              <TextMenu text="Home" isVisible={open} url="/" onClick={toggle}/>
+              <TextMenu text="Omni|Bnk" isVisible={open} url="/#omnibnk" onClick={() => toggle()}/>
+              <TextMenu text="PortalFinance" isVisible={open} url="/#portalfinance" onClick={() => toggle()} />
             </Nav>
           }}
         </Spring>

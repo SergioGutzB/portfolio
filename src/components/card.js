@@ -30,7 +30,7 @@ const CoverBlue = styled(Cover)`
 `
 
 function Card(props) {
-  const { isVisible, imageUrl } = props
+  const { isVisible, imageUrl, filter } = props
   return (
     <Spring
       config={{
@@ -61,7 +61,7 @@ function Card(props) {
               height: "100%",
             }}
           />
-          <Filter />
+          { filter === false ? null : <Filter />}
           <div>
             <Cover style={{ transform: props.transform2 }} />
             <CoverBlue style={{ transform: props.transform3 }} />
