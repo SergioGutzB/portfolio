@@ -178,7 +178,7 @@ class Elbanderin extends React.Component {
             style={{ width: "calc(100% - 100px)", margin: "50px auto" }}
           >
             <Image
-              filename="mockup-portalfinance.png"
+              filename="elbanderin/mockup-elbanderin.png"
               style={{ marginTop: "10px" }}
             />
           </ImageFull>
@@ -200,7 +200,7 @@ class Elbanderin extends React.Component {
           </SectionText>
           <ImageFull>
             <Image
-              filename="perspective-portal.png"
+              filename="elbanderin/perspective-elbanderin.png"
               alt="Perpesctive Omni|Bnk"
             />
           </ImageFull>
