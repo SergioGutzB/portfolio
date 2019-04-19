@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
 import TextMenu from "./text-menu"
+import Link from "gatsby-link"
+import { navigate } from "gatsby"
 
 const Header = styled.header`
   top: 0;
@@ -51,9 +53,9 @@ const MenuIcon = styled.div`
     transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     bottom: ${props => (props.open ? "50%" : "0")};
     transform: ${props =>
-    props.open
-      ? "rotate(-45deg) translate3d(0, 50%, 0)"
-      : "rotate(0deg) translate3d(0, 0, 0)"};
+      props.open
+        ? "rotate(-45deg) translate3d(0, 50%, 0)"
+        : "rotate(0deg) translate3d(0, 0, 0)"};
   }
   &:after {
     content: "";
@@ -65,47 +67,55 @@ const MenuIcon = styled.div`
     transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     top: ${props => (props.open ? "50%" : "0")};
     transform: ${props =>
-    props.open
-      ? "rotate(45deg) translate3d(0, -50%, 0)"
-      : "rotate(0deg) translate3d(0, 0, 0)"};
+      props.open
+        ? "rotate(45deg) translate3d(0, -50%, 0)"
+        : "rotate(0deg) translate3d(0, 0, 0)"};
   }
 `
 
-class HeaderFixed extends React.Component {
-  state = {
-    open: false,
+const HeaderFixed = () => {
+  const [open, setOpen] = useState(false)
+  const toggle = (url = undefined) => {
+    setOpen(!open)
+    if (url) {
+      setTimeout(() => {
+        navigate(url)
+      }, 600)
+    }
   }
 
-  toggle = () => {
-    console.log("toogle")
-    this.setState({ open: !this.state.open })
-  }
+  return (
+    <Header>
+      <Wrap>
+        <MenuIcon open={open} onClick={() => toggle()} />
+      </Wrap>
 
-  render() {
-    const { open } = this.state
-    const toggle = this.toggle
-    return (
-      <Header>
-        <Wrap>
-          <MenuIcon open={open} onClick={() => this.toggle()} />
-        </Wrap>
-
-        <Spring
-          to={{
-            height: open ? "100" : "0",
-          }}
-        >
-          {props => {
-            return <Nav style={{ height: `${props.height}vh` }}>
-              <TextMenu text="Home" isVisible={open} url="/" onClick={toggle}/>
-              <TextMenu text="Omni|Bnk" isVisible={open} url="/#omnibnk" onClick={() => toggle()}/>
-              <TextMenu text="PortalFinance" isVisible={open} url="/#portalfinance" onClick={() => toggle()} />
+      <Spring
+        to={{
+          height: open ? "100" : "0",
+        }}
+      >
+        {props => {
+          return (
+            <Nav style={{ height: `${props.height}vh` }}>
+              <ul>
+                <li onClick={() => toggle("/")}>
+                  <TextMenu text="Home" isVisible={open} />
+                </li>
+                <li onClick={() => toggle("/omnibnk")}>
+                  <TextMenu text="Omni|Bnk" isVisible={open} />
+                </li>
+                <li onClick={() => toggle("/portalfinance")}>
+                  <TextMenu text="PortalFinance" isVisible={open} />
+                </li>
+                <li />
+              </ul>
             </Nav>
-          }}
-        </Spring>
-      </Header>
-    )
-  }
+          )
+        }}
+      </Spring>
+    </Header>
+  )
 }
 
 export default HeaderFixed

@@ -40,10 +40,8 @@ const Container = styled.div`
 function TextMenu(props) {
   const { isVisible, text, url } = props
   return (
-    <Container onClick={() => console.log('click')}>
-      <Link to={url ? url : "#"}>
-        <SubText visible={isVisible ? true : false}>{text}</SubText>
-      </Link>
+    <Container>
+      <SubText visible={isVisible ? true : false}>{text}</SubText>
     </Container>
   )
 }
