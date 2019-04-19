@@ -110,7 +110,7 @@ const HeaderFixed = () => {
                 <li onClick={() => toggle("/elbanderin")}>
                   <TextMenu text="El Banderin" isVisible={open} />
                 </li>
-                <li onClick={() => toggle("/portalfinance")}>
+                <li onClick={() => toggle("/volaires")}>
                   <TextMenu text="Volaires" isVisible={open} />
                 </li>
                 <li onClick={() => toggle("/about")}>
