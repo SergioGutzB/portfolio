@@ -14,6 +14,7 @@ const SubText = styled.div`
   text-shadow: 0 10px 30px rgba(2, 11, 22, 0.2);
   text-transform: uppercase;
   transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
+  padding: 8px 0px;
   transform: ${props =>
     props.visible ? "translate3d(0, 0, 0)" : "translate3d(0, 100%, 0)"};
   &:after {
@@ -35,9 +36,8 @@ const SubText = styled.div`
 `
 const Container = styled.div`
   display: inline-block;
-  margin-top: 4rem;
   position: relative;
-  padding: 0 153px;
+  padding: 0px 153px;
   overflow: hidden;
 `
 

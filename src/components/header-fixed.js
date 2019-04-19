@@ -1,8 +1,8 @@
-import React, { useState } from "react"
-import { Spring } from "react-spring/renderprops"
-import styled from "styled-components"
-import TextMenu from "./text-menu"
-import { navigate } from "gatsby"
+import React, { useState } from 'react';
+import { Spring } from 'react-spring/renderprops';
+import styled from 'styled-components';
+import TextMenu from './text-menu';
+import { navigate } from 'gatsby';
 
 const Header = styled.header`
   top: 0;
@@ -10,16 +10,16 @@ const Header = styled.header`
   color: #fff;
   display: flex;
   justify-content: space-between;
-  z-index: 1000;
+  z-index: 2000;
   position: fixed;
-`
+`;
 
 const Wrap = styled.div`
   display: flex;
   position: relative;
   padding: 40px;
   width: calc(100vw - 80px);
-`
+`;
 
 const Nav = styled.div`
   width: 100vw;
@@ -31,57 +31,67 @@ const Nav = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 2000;
   overflow: hidden;
-`
+`;
 
 const MenuIcon = styled.div`
   position: relative;
   width: 50px;
   height: 22px;
   cursor: pointer;
-  z-index: 1010;
+  z-index: 2010;
   margin-left: auto;
   &:before {
-    content: "";
+    content: '';
     width: 100%;
     height: 3px;
     background: #fff;
     position: absolute;
     right: 0;
     transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    bottom: ${props => (props.open ? "50%" : "0")};
+    bottom: ${props => (props.open ? '50%' : '0')};
     transform: ${props =>
       props.open
-        ? "rotate(-45deg) translate3d(0, 50%, 0)"
-        : "rotate(0deg) translate3d(0, 0, 0)"};
+        ? 'rotate(-45deg) translate3d(0, 50%, 0)'
+        : 'rotate(0deg) translate3d(0, 0, 0)'};
   }
   &:after {
-    content: "";
+    content: '';
     width: 100%;
     height: 3px;
     background: #fff;
     position: absolute;
     right: 0;
     transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    top: ${props => (props.open ? "50%" : "0")};
+    top: ${props => (props.open ? '50%' : '0')};
     transform: ${props =>
       props.open
-        ? "rotate(45deg) translate3d(0, -50%, 0)"
-        : "rotate(0deg) translate3d(0, 0, 0)"};
+        ? 'rotate(45deg) translate3d(0, -50%, 0)'
+        : 'rotate(0deg) translate3d(0, 0, 0)'};
   }
-`
+`;
 
 const HeaderFixed = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   const toggle = (url = undefined) => {
-    setOpen(!open)
+    setOpen(!open);
     if (url) {
       setTimeout(() => {
-        navigate(url)
-      }, 600)
+        navigate(url);
+      }, 600);
     }
-  }
+  };
+
+  const Ul = styled.ul`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+  `;
 
   return (
     <Header>
@@ -91,39 +101,39 @@ const HeaderFixed = () => {
 
       <Spring
         to={{
-          height: open ? "100" : "0",
+          height: open ? '100' : '0',
         }}
       >
         {props => {
           return (
             <Nav style={{ height: `${props.height}vh` }}>
-              <ul>
-                <li onClick={() => toggle("/")}>
+              <Ul>
+                <li onClick={() => toggle('/')}>
                   <TextMenu text="Home" isVisible={open} />
                 </li>
-                <li onClick={() => toggle("/omnibnk")}>
+                <li onClick={() => toggle('/omnibnk')}>
                   <TextMenu text="Omni|Bnk" isVisible={open} />
                 </li>
-                <li onClick={() => toggle("/portalfinance")}>
+                <li onClick={() => toggle('/portalfinance')}>
                   <TextMenu text="PortalFinance" isVisible={open} />
                 </li>
-                <li onClick={() => toggle("/elbanderin")}>
+                <li onClick={() => toggle('/elbanderin')}>
                   <TextMenu text="El Banderin" isVisible={open} />
                 </li>
-                <li onClick={() => toggle("/volaires")}>
+                <li onClick={() => toggle('/volaires')}>
                   <TextMenu text="Volaires" isVisible={open} />
                 </li>
-                <li onClick={() => toggle("/about")}>
+                <li onClick={() => toggle('/about')}>
                   <TextMenu text="about me" isVisible={open} />
                 </li>
                 <li />
-              </ul>
+              </Ul>
             </Nav>
-          )
+          );
         }}
       </Spring>
     </Header>
-  )
-}
+  );
+};
 
-export default HeaderFixed
+export default HeaderFixed;

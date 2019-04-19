@@ -23,6 +23,7 @@
     "react-dom": "^16.8.6",
     "react-fullpage": "^0.1.19",
     "react-helmet": "^5.2.0",
+    "react-on-screen": "^2.1.1",
     "react-spring": "^8.0.19",
     "react-visibility-sensor": "^5.0.2",
     "styled-components": "^4.2.0"

@@ -3,13 +3,12 @@ import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
 
 const SubText = styled.div`
-  font-size: 8rem;
   font-family: "Roboto";
-  letter-spacing: 0.1em;
-  font-weight: 300;
+  letter-spacing: 0.18em;
+  font-weight: 400;
   margin: 0px;
   line-height: 1;
-  font-size: 3rem;
+  font-size: 2.4rem;
   margin-top: 10px;
 `
 
@@ -17,7 +16,7 @@ function SubTitleText(props) {
   const { isVisible, text, delay } = props
   return (
     <Spring
-      delay={delay ? delay : 500}
+      delay={delay ? delay : 600}
       config={{
         friction: 28,
       }}

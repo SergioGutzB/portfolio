@@ -7,7 +7,7 @@ import { Spring } from "react-spring/renderprops"
 const Arrow = styled.div`
   width: 64px;
   transition:All 0.3s ease-out;
-  z-index: 2020;
+  z-index: 1020;
   position: fixed;
   top: 122px;
   left: 42px;
