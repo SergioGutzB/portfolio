@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import HeaderFixed from "../components/header-fixed"
 import CardFull from "../components/card-full"
 import ButtonBack from "../components/button-back"

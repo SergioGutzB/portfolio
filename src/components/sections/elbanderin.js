@@ -18,7 +18,6 @@ class ElBanderin extends React.Component {
   render() {
     const { section, index } = this.props
     const isVisible = section === index ? true : false
-    const props = { text: "El banderín", isVisible, reverse: true }
     return (
       <div className="section">
         <Section>

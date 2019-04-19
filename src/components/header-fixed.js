@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
 import TextMenu from "./text-menu"
-import Link from "gatsby-link"
 import { navigate } from "gatsby"
 
 const Header = styled.header`

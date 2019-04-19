@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Link from "gatsby-link"
 
 const SubText = styled.div`
   display: inline-block;
@@ -43,7 +42,7 @@ const Container = styled.div`
 `
 
 function TextMenu(props) {
-  const { isVisible, text, url } = props
+  const { isVisible, text } = props
   return (
     <Container>
       <SubText visible={isVisible ? true : false}>{text}</SubText>

@@ -72,8 +72,8 @@ class App extends React.Component {
         <HeaderFixed />
         <ReactFullpage
           {...fullpageOptions}
-          render={({ state, fullpageApi }) => {
-            const { initialized, destination } = state
+          render={({ state }) => {
+            const { destination } = state
             const show = destination ? destination.index + 1 : 1
             return (
               <Fullpage id="fullpage-wrapper">

@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Arrowleft from "../assets/left-black.svg"
 import Link from "gatsby-link"
-import { Spring } from "react-spring/renderprops"
 
 const Arrow = styled.div`
   min-width: 64px;
@@ -10,7 +9,7 @@ const Arrow = styled.div`
   z-index: 2020;
   display: flex;
   flex-direction: row;
-  transition:All 0.7s ease-out;
+  transition: All 0.7s ease-out;
   &:hover {
     transform: translateX(-40px);
     cursor: pointer;

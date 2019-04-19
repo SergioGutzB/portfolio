@@ -13,20 +13,6 @@ const CardDiv = styled.div`
   overflow: hidden;
   width: 72.5%;
 `
-
-const Cover = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  background: #ff4d5a;
-  transform: translate3d(100%, 0, 0);
-`
-const CoverBlue = styled(Cover)`
-  background: #072142;
-`
-
 function Card(props) {
   const { imageUrl } = props
   return (
