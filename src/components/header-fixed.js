@@ -108,6 +108,15 @@ const HeaderFixed = () => {
                 <li onClick={() => toggle("/portalfinance")}>
                   <TextMenu text="PortalFinance" isVisible={open} />
                 </li>
+                <li onClick={() => toggle("/elbanderin")}>
+                  <TextMenu text="El Banderin" isVisible={open} />
+                </li>
+                <li onClick={() => toggle("/portalfinance")}>
+                  <TextMenu text="Volaires" isVisible={open} />
+                </li>
+                <li onClick={() => toggle("/about")}>
+                  <TextMenu text="about me" isVisible={open} />
+                </li>
                 <li />
               </ul>
             </Nav>
