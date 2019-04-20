@@ -83,16 +83,6 @@ const HeaderFixed = () => {
     }
   };
 
-  const Ul = styled.ul`
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-  `;
-
   return (
     <Header>
       <Wrap>
@@ -107,7 +97,7 @@ const HeaderFixed = () => {
         {props => {
           return (
             <Nav style={{ height: `${props.height}vh` }}>
-              <Ul>
+              <ul>
                 <li onClick={() => toggle('/')}>
                   <TextMenu text="Home" isVisible={open} />
                 </li>
@@ -127,7 +117,7 @@ const HeaderFixed = () => {
                   <TextMenu text="about me" isVisible={open} />
                 </li>
                 <li />
-              </Ul>
+              </ul>
             </Nav>
           );
         }}

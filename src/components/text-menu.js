@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { media } from "../styles/global"
 
 const SubText = styled.div`
   display: inline-block;
@@ -11,7 +12,7 @@ const SubText = styled.div`
   margin: 0px;
   line-height: 1;
   font-size: 8rem;
-  text-shadow: 0 10px 30px rgba(2, 11, 22, 0.2);
+  text-shadow: 0 5px 15px rgba(2, 11, 22, 0.4);
   text-transform: uppercase;
   transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
   padding: 8px 0px;
@@ -33,12 +34,27 @@ const SubText = styled.div`
       width: 100%;
     }
   }
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    font-size: 9vw;
+  `}
 `
 const Container = styled.div`
   display: inline-block;
   position: relative;
   padding: 0px 153px;
   overflow: hidden;
+  margin-top: 2%;
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    margin-top: 5vw;
+  `}
 `
 
 function TextMenu(props) {
