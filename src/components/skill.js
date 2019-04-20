@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import Image from '../components/image';
 import TrackVisibility from 'react-on-screen';
 import { media } from '../styles/global'

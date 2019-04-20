@@ -11,21 +11,16 @@ import {
   ContainerFloat,
   Wrapper,
   Section,
-  SectionHeader,
-  SectionIcons,
   SectionText,
   SectionPage,
-  SubTitle,
   Text,
   ImageFull,
   Title,
-  ImageIcon,
   FooterBack,
   media,
 } from '../styles/global';
 import Skill from '../components/skill';
 import styled from 'styled-components';
-import Link from 'gatsby-link';
 
 const Skills = styled.div`
   width: 90%;

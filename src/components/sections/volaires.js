@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styled from "styled-components"
 import Titletext from "../title-text"
 import Bars from "../bars"
 import SubTitleText from "../sub-title-text"

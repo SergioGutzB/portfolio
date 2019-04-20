@@ -28,7 +28,7 @@ const Button = styled.button`
 `;
 
 const RaisedButton = props => {
-  const { text, isVisible, delay, url } = props;
+  const { text, isVisible, url } = props;
   return (
     <Link to={url ? url : '/'}>
       <Button isVisible={isVisible}>{text}</Button>

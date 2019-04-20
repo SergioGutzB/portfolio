@@ -24,7 +24,7 @@ const SubText = styled.div`
 `;
 
 function SubTitleText(props) {
-  const { isVisible, text, delay } = props;
+  const { isVisible, text } = props;
   return <SubText isVisible={isVisible}>{text}</SubText>;
 }
 

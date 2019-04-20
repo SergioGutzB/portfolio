@@ -1,12 +1,10 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Spring } from "react-spring/renderprops"
-import styled from "styled-components"
-import Bars from "../bars"
-import Titletext from "../title-text"
-import SubTitleText from "../sub-title-text"
-import { Section, media } from '../../styles/global'
-
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import Bars from '../bars';
+import Titletext from '../title-text';
+import SubTitleText from '../sub-title-text';
+import { Section, media } from '../../styles/global';
 
 const Row = styled.div`
   display: flex;
@@ -24,7 +22,7 @@ const Row = styled.div`
     height: auto;
     justify-content: flex-end;
   `}
-`
+`;
 const Portfolio = styled.h3`
   font-size: 6rem;
   letter-spacing: 0.1em;
@@ -35,6 +33,10 @@ const Portfolio = styled.h3`
   text-shadow: 0 10px 15px rgba(2, 11, 22, 0.2);
   font-family: "Roboto";
   font-weight: 900;
+  opacity: ${props => (props.isVisible ? 1 : 0)};
+  transform: ${props =>
+    props.isVisible ? 'translateX(0)' : 'translateX(400px)'};
+  transition: transform 0.8s ease-out 0.2s;
   ${media.desktop`
   `}
   ${media.tablet`
@@ -44,22 +46,24 @@ const Portfolio = styled.h3`
     text-align: center;
     font-size: 7vw;
   `}
-`
+`;
 
 class Hero extends React.Component {
   state = {
     isVisible: false,
-  }
+  };
 
   componentWillReceiveProps(nextProps) {
-    this.setState({isVisible: nextProps.index === nextProps.section ? true : false})
+    this.setState({
+      isVisible: nextProps.index === nextProps.section ? true : false,
+    });
   }
   render() {
-    const {isVisible} = this.state
+    const { isVisible } = this.state;
     return (
       <div className="section">
         <Section>
-          <Row>
+          <Row style={{paddingLeft: '35px'}}>
             <Titletext text="SERGIO" isVisible={isVisible} delay={500} />
             <Titletext text="GUTIERREZ" isVisible={isVisible} delay={500} />
             <Bars isVisible={isVisible} />
@@ -75,39 +79,26 @@ class Hero extends React.Component {
             />
           </Row>
           <Row>
-            <Spring
-              delay={300}
-              config={{
-                friction: 40,
-              }}
-              to={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateX(0)" : "translateX(400px)",
+            <div
+              style={{
+                flex: 'auto',
+                display: 'flex',
+                alignItems: 'center',
+                width: '100%',
               }}
             >
-              {props => (
-                <div
-                  style={{
-                    flex: "auto",
-                    display: "flex",
-                    alignItems: "center",
-                    width: "100%"
-                  }}
-                >
-                  <Portfolio style={{ ...props }}>PORTFOLIO</Portfolio>
-                </div>
-              )}
-            </Spring>
+              <Portfolio isVisible={isVisible}>PORTFOLIO</Portfolio>
+            </div>
           </Row>
         </Section>
       </div>
-    )
+    );
   }
 }
 
 Hero.propTypes = {
   index: PropTypes.number,
   section: PropTypes.number,
-}
+};
 
-export default Hero
+export default Hero;

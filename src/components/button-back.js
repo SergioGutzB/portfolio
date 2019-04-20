@@ -1,9 +1,17 @@
-import React from "react"
-import styled from "styled-components"
-import Arrowleft from "../assets/left-white.svg"
-import Link from "gatsby-link"
-import { Spring } from "react-spring/renderprops"
-import { media } from "../styles/global"
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
+import Arrowleft from '../assets/left-white.svg';
+import Link from 'gatsby-link';
+import { media } from '../styles/global';
+
+const arrowMove = keyframes`
+  0% {
+    left: -64px;
+  }
+  100% {
+    left: 42px;
+  }
+`;
 
 const Arrow = styled.div`
   width: 64px;
@@ -11,9 +19,10 @@ const Arrow = styled.div`
   z-index: 1020;
   position: fixed;
   top: 122px;
-  left: 42px;
+  animation: ${arrowMove} 0.8s ease-out forwards;
   &:hover {
-    transform: translateX(-10px);
+    transform: translateX(-15px);
+    transition: transform 0.3s ease-out;
     cursor: pointer;
   }
   ${media.desktop`
@@ -29,29 +38,17 @@ const Arrow = styled.div`
       width: 45px;
     }
   `}
-`
+`;
 
 const ButtonBack = props => {
-  const { url } = props
+  const { url } = props;
   return (
-    <Spring
-      delay={400}
-      from={{
-        left: "-64px",
-      }}
-      to={{
-        left: "42px",
-      }}
-    >
-      {props => (
-        <Link to={url ? url : "/"}>
-          <Arrow style={props}>
-            <Arrowleft/>
-          </Arrow>
-        </Link>
-      )}
-    </Spring>
-  )
-}
+    <Link to={url ? url : '/'}>
+      <Arrow>
+        <Arrowleft />
+      </Arrow>
+    </Link>
+  );
+};
 
-export default ButtonBack
+export default ButtonBack;
