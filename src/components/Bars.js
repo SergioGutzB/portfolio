@@ -1,7 +1,8 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Spring } from "react-spring/renderprops"
-import styled from "styled-components"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Spring } from 'react-spring/renderprops';
+import styled from 'styled-components';
+import { media } from '../styles/global';
 
 const Bar = styled.span`
   display: block;
@@ -10,16 +11,24 @@ const Bar = styled.span`
   width: 88px;
   background-color: #ff4d5a;
   margin-top: 10px;
-`
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    width: 60px;
+    height: 2px;
+  `}
+`;
 
 const BarContainer = styled.div`
   padding: 25px 0px;
   text-align: center;
-`
+`;
 
 class Bars extends React.Component {
   render() {
-    const { isVisible } = this.props
+    const { isVisible } = this.props;
     return (
       <BarContainer>
         <Spring
@@ -30,12 +39,12 @@ class Bars extends React.Component {
           }}
           to={{
             opacity: isVisible ? 1 : 0,
-            marginRight: isVisible ? "0px" : "50px",
-            transform: isVisible ? "translateX(0)" : "translateX(-208px)",
+            marginRight: isVisible ? '0px' : '50px',
+            transform: isVisible ? 'translateX(0)' : 'translateX(-208px)',
           }}
         >
           {props => (
-            <div style={{ position: "relative" }}>
+            <div style={{ position: 'relative' }}>
               <Bar style={{ ...props }} />
             </div>
           )}
@@ -44,8 +53,8 @@ class Bars extends React.Component {
           delay={500}
           to={{
             opacity: isVisible ? 1 : 0,
-            marginLeft: isVisible ? "50px" : "0px",
-            transform: isVisible ? "translateX(0)" : "translateX(-208px)",
+            marginLeft: isVisible ? '50px' : '0px',
+            transform: isVisible ? 'translateX(0)' : 'translateX(-208px)',
           }}
         >
           {props => (
@@ -55,12 +64,12 @@ class Bars extends React.Component {
           )}
         </Spring>
       </BarContainer>
-    )
+    );
   }
 }
 
 Bars.propTypes = {
   isVisible: PropTypes.bool,
-}
+};
 
-export default Bars
+export default Bars;

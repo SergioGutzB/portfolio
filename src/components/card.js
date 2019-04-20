@@ -2,7 +2,7 @@ import React from "react"
 import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
 import Image from "./image"
-import { Filter } from "../styles/global" 
+import { Filter, media } from "../styles/global" 
 
 const CardDiv = styled.div`
   margin: 0 0 0 auto;
@@ -14,6 +14,16 @@ const CardDiv = styled.div`
   overflow: hidden;
   background-size: cover;
   background-position: left center;
+  ${media.desktop`
+
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    height: 60%;
+    margin: 70px auto auto;
+    width: 90%;
+  `}
 `
 
 const Cover = styled.div`

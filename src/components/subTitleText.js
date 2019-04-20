@@ -1,6 +1,7 @@
-import React from "react"
-import { Spring } from "react-spring/renderprops"
-import styled from "styled-components"
+import React from 'react';
+import { Spring } from 'react-spring/renderprops';
+import styled from 'styled-components';
+import { media } from "../styles/global"
 
 const SubText = styled.div`
   font-family: "Roboto";
@@ -10,10 +11,17 @@ const SubText = styled.div`
   line-height: 1;
   font-size: 2.4rem;
   margin-top: 10px;
-`
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    font-size: 4vw;
+  `}
+`;
 
 function SubTitleText(props) {
-  const { isVisible, text, delay } = props
+  const { isVisible, text, delay } = props;
   return (
     <Spring
       delay={delay ? delay : 600}
@@ -22,12 +30,12 @@ function SubTitleText(props) {
       }}
       to={{
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "translateX(0)" : "translateX(-300px)",
+        transform: isVisible ? 'translateX(0)' : 'translateX(-300px)',
       }}
     >
       {props => <SubText style={props}>{text}</SubText>}
     </Spring>
-  )
+  );
 }
 
-export default SubTitleText
+export default SubTitleText;

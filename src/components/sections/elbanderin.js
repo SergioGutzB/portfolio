@@ -6,13 +6,8 @@ import Bars from '../Bars'
 import SubTitleText from '../subTitleText'
 import Card from '../card'
 import RaisedButton from '../button'
-import { Section } from '../../styles/global'
+import { Section, ContainerFloat } from '../../styles/global'
 
-
-const ContainerFloat = styled.div`
-  position: absolute;
-  width: 50%;
-`
 
 class ElBanderin extends React.Component {
   render() {

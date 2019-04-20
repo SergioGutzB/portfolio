@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Arrowleft from "../assets/left-white.svg"
 import Link from "gatsby-link"
 import { Spring } from "react-spring/renderprops"
+import { media } from "../styles/global"
 
 const Arrow = styled.div`
   width: 64px;
@@ -15,6 +16,13 @@ const Arrow = styled.div`
     transform: translateX(-10px);
     cursor: pointer;
   }
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    margin: 30px 25px 0px auto;
+  `}
 `
 
 const ButtonBack = props => {

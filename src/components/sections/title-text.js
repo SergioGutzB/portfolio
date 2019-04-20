@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
+import { media } from "../../styles/global"
 
 const Textani = styled.h1`
   font-size: 8.5rem;
@@ -10,6 +11,13 @@ const Textani = styled.h1`
   font-weight: 900;
   margin: 0px;
   line-height: 1;
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    font-size: 8.5vw;
+  `}
 `
 class Titletext extends React.Component {
   render() {

@@ -24,10 +24,11 @@ import {
 } from '../styles/global';
 import Skill from '../components/skill';
 import styled from 'styled-components';
+import Link from 'gatsby-link';
 
 const Skills = styled.div`
   width: 90%;
-  margin: 140px auto;
+  margin: 100px auto 140px;
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 50px;
@@ -217,6 +218,9 @@ class About extends React.Component {
           </div>
           <FooterBack>
             <ButtonBackBlack url="/#about" text="BACK" />
+            <a href="mailto:sergut18@gmail.com" style={{marginTop: '40px'}}>
+              <Text>sergut18@gmail.com</Text>
+            </a>
           </FooterBack>
         </SectionPage>
       </Wrapper>

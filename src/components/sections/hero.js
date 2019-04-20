@@ -5,7 +5,7 @@ import styled from "styled-components"
 import Bars from "../Bars"
 import Titletext from "../sections/title-text"
 import SubTitleText from "../subTitleText"
-import { Section } from '../../styles/global'
+import { Section, media } from '../../styles/global'
 
 
 const Row = styled.div`
@@ -15,6 +15,15 @@ const Row = styled.div`
   align-items: flex-start;
   flex: auto;
   height: 100%;
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    width: 100%;
+    height: auto;
+    justify-content: flex-end;
+  `}
 `
 const Portfolio = styled.h3`
   font-size: 6rem;
@@ -26,6 +35,15 @@ const Portfolio = styled.h3`
   text-shadow: 0 10px 15px rgba(2, 11, 22, 0.2);
   font-family: "Roboto";
   font-weight: 900;
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    width: 100%;
+    text-align: center;
+    font-size: 7vw;
+  `}
 `
 
 class Hero extends React.Component {
@@ -73,6 +91,7 @@ class Hero extends React.Component {
                     flex: "auto",
                     display: "flex",
                     alignItems: "center",
+                    width: "100%"
                   }}
                 >
                   <Portfolio style={{ ...props }}>PORTFOLIO</Portfolio>
