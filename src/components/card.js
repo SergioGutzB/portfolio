@@ -1,8 +1,7 @@
-import React from "react"
-import { Spring } from "react-spring/renderprops"
-import styled from "styled-components"
-import Image from "./image"
-import { Filter, media } from "../styles/global" 
+import React from 'react';
+import styled from 'styled-components';
+import Image from './image';
+import { Filter, media } from '../styles/global';
 
 const CardDiv = styled.div`
   margin: 0 0 0 auto;
@@ -14,8 +13,12 @@ const CardDiv = styled.div`
   overflow: hidden;
   background-size: cover;
   background-position: left center;
+  transform: ${props =>
+    props.isVisible
+      ? 'translate(0, 0) scale(1)'
+      : 'translate(10%, 0) scale(0.8)'};
+  transition: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   ${media.desktop`
-
   `}
   ${media.tablet`
   `}
@@ -24,7 +27,7 @@ const CardDiv = styled.div`
     margin: 70px auto auto;
     width: 84%;
   `}
-`
+`;
 
 const Cover = styled.div`
   position: absolute;
@@ -33,53 +36,42 @@ const Cover = styled.div`
   top: 0;
   right: 0;
   background: #ff4d5a;
-  transform: translate3d(100%, 0, 0);
-`
+  transform: ${props =>
+    props.isVisible
+      ? 'translateX(110%) translateZ(0px)'
+      : 'translateX(-100%) translateZ(0px)'};
+  transition: transform 1s;
+`;
 const CoverBlue = styled(Cover)`
   background: #072142;
-`
+  transform: ${props =>
+    props.isVisible
+      ? 'translateX(160%) translateZ(0px)'
+      : 'translateX(-40%) translateZ(0px)'};
+  transition: transform 1s;
+`;
 
 function Card(props) {
-  const { isVisible, imageUrl, filter } = props
+  const { isVisible, imageUrl, filter } = props;
   return (
-    <Spring
-      config={{
-        clamp: true,
-        friction: 70,
-      }}
-      to={{
-        transform1: isVisible
-          ? "translate(0, 0) scale(1)"
-          : "translate(10%, 0) scale(0.82)",
-        transform2: isVisible
-          ? "translateX(110%) translateZ(0px)"
-          : "translateX(-100%) translateZ(0px)",
-        transform3: isVisible
-          ? "translateX(160%) translateZ(0px)"
-          : "translateX(-40%) translateZ(0px)",
-      }}
-    >
-      {props => (
-        <CardDiv style={{ transform: props.transform1 }}>
-          <Image
-            filename={imageUrl}
-            styles={{
-              position: "absolute",
-              left: 0,
-              top: 0,
-              width: "100%",
-              height: "100%",
-            }}
-          />
-          { filter === false ? null : <Filter />}
-          <div>
-            <Cover style={{ transform: props.transform2 }} />
-            <CoverBlue style={{ transform: props.transform3 }} />
-          </div>
-        </CardDiv>
-      )}
-    </Spring>
-  )
+    <CardDiv isVisible={isVisible}>
+      <Image
+        filename={imageUrl}
+        styles={{
+          position: 'absolute',
+          left: 0,
+          top: 0,
+          width: '100%',
+          height: '100%',
+        }}
+      />
+      {filter === false ? null : <Filter />}
+      <div>
+        <Cover isVisible={isVisible} />
+        <CoverBlue isVisible={isVisible} />
+      </div>
+    </CardDiv>
+  );
 }
 
-export default Card
+export default Card;

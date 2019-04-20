@@ -19,9 +19,9 @@ import {
 } from "../styles/global"
 import ButtonBack from "../components/button-back"
 import ButtonBackBlack from "../components/button-back-black"
-import Titletext from "../components/sections/title-text"
-import Bars from "../components/Bars"
-import SubTitleText from "../components/subTitleText"
+import Titletext from "../components/title-text"
+import Bars from "../components/bars"
+import SubTitleText from "../components/sub-title-text"
 import Image from "../components/image"
 
 const SectionIframes = styled.section`

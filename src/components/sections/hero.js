@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
-import Bars from "../Bars"
-import Titletext from "../sections/title-text"
-import SubTitleText from "../subTitleText"
+import Bars from "../bars"
+import Titletext from "../title-text"
+import SubTitleText from "../sub-title-text"
 import { Section, media } from '../../styles/global'
 
 

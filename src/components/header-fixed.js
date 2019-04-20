@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Spring } from 'react-spring/renderprops';
 import styled from 'styled-components';
 import TextMenu from './text-menu';
 import { navigate } from 'gatsby';
-import { media } from "../styles/global"
+import { media } from '../styles/global';
 
 const Header = styled.header`
   top: 0;
@@ -42,6 +41,8 @@ const Nav = styled.div`
   align-items: center;
   z-index: 2000;
   overflow: hidden;
+  height: ${props => (props.open ? '100vh' : '0')};
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 `;
 
 const MenuIcon = styled.div`
@@ -105,40 +106,29 @@ const HeaderFixed = () => {
       <Wrap>
         <MenuIcon open={open} onClick={() => toggle()} />
       </Wrap>
-
-      <Spring
-        to={{
-          height: open ? '100' : '0',
-        }}
-      >
-        {props => {
-          return (
-            <Nav style={{ height: `${props.height}vh` }}>
-              <ul>
-                <li onClick={() => toggle('/')}>
-                  <TextMenu text="Home" isVisible={open} />
-                </li>
-                <li onClick={() => toggle('/omnibnk')}>
-                  <TextMenu text="Omni|Bnk" isVisible={open} />
-                </li>
-                <li onClick={() => toggle('/portalfinance')}>
-                  <TextMenu text="PortalFinance" isVisible={open} />
-                </li>
-                <li onClick={() => toggle('/elbanderin')}>
-                  <TextMenu text="El Banderin" isVisible={open} />
-                </li>
-                <li onClick={() => toggle('/volaires')}>
-                  <TextMenu text="Volaires" isVisible={open} />
-                </li>
-                <li onClick={() => toggle('/about')}>
-                  <TextMenu text="about me" isVisible={open} />
-                </li>
-                <li />
-              </ul>
-            </Nav>
-          );
-        }}
-      </Spring>
+      <Nav open={open}>
+        <ul>
+          <li onClick={() => toggle('/')}>
+            <TextMenu text="Home" isVisible={open} />
+          </li>
+          <li onClick={() => toggle('/omnibnk')}>
+            <TextMenu text="Omni|Bnk" isVisible={open} />
+          </li>
+          <li onClick={() => toggle('/portalfinance')}>
+            <TextMenu text="PortalFinance" isVisible={open} />
+          </li>
+          <li onClick={() => toggle('/elbanderin')}>
+            <TextMenu text="El Banderin" isVisible={open} />
+          </li>
+          <li onClick={() => toggle('/volaires')}>
+            <TextMenu text="Volaires" isVisible={open} />
+          </li>
+          <li onClick={() => toggle('/about')}>
+            <TextMenu text="about me" isVisible={open} />
+          </li>
+          <li />
+        </ul>
+      </Nav>
     </Header>
   );
 };

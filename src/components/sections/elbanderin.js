@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import Titletext from "./title-text"
-import Bars from '../Bars'
-import SubTitleText from '../subTitleText'
+import Titletext from "../title-text"
+import Bars from '../bars'
+import SubTitleText from '../sub-title-text'
 import Card from '../card'
 import RaisedButton from '../button'
 import { Section, ContainerFloat } from '../../styles/global'
