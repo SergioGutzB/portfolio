@@ -3,6 +3,7 @@ import { Spring } from 'react-spring/renderprops';
 import styled from 'styled-components';
 import TextMenu from './text-menu';
 import { navigate } from 'gatsby';
+import { media } from "../styles/global"
 
 const Header = styled.header`
   top: 0;
@@ -19,6 +20,14 @@ const Wrap = styled.div`
   position: relative;
   padding: 40px;
   width: calc(100vw - 80px);
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    padding: 24px;
+    width: calc(100vw - 50px);
+  `}
 `;
 
 const Nav = styled.div`
@@ -70,6 +79,14 @@ const MenuIcon = styled.div`
         ? 'rotate(45deg) translate3d(0, -50%, 0)'
         : 'rotate(0deg) translate3d(0, 0, 0)'};
   }
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    width: 35px;
+    height: 18px;
+  `}
 `;
 
 const HeaderFixed = () => {

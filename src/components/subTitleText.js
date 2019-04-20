@@ -17,6 +17,7 @@ const SubText = styled.div`
   `}
   ${media.phone`
     font-size: 4vw;
+    width: 90%;
   `}
 `;
 

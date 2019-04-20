@@ -20,9 +20,9 @@ const CardDiv = styled.div`
   ${media.tablet`
   `}
   ${media.phone`
-    height: 60%;
+    height: 55%;
     margin: 70px auto auto;
-    width: 90%;
+    width: 84%;
   `}
 `
 

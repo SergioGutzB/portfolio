@@ -1,5 +1,5 @@
 import React from "react"
-import "fullpage.js/vendors/scrolloverflow"
+// import "fullpage.js/vendors/scrolloverflow"
 import ReactFullpage from "@fullpage/react-fullpage"
 import Hero from "../components/sections/hero"
 import Omnibnk from "../components/sections/omnibnk"

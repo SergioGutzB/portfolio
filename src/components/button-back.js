@@ -21,7 +21,13 @@ const Arrow = styled.div`
   ${media.tablet`
   `}
   ${media.phone`
+    width: 54px;
     margin: 30px 25px 0px auto;
+    top: 5vw;
+    margin-left: -10px;
+    svg {
+      width: 45px;
+    }
   `}
 `
 
@@ -40,7 +46,7 @@ const ButtonBack = props => {
       {props => (
         <Link to={url ? url : "/"}>
           <Arrow style={props}>
-            <Arrowleft style={{ width: "64px" }} />
+            <Arrowleft/>
           </Arrow>
         </Link>
       )}

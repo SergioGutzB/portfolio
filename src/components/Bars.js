@@ -24,6 +24,13 @@ const Bar = styled.span`
 const BarContainer = styled.div`
   padding: 25px 0px;
   text-align: center;
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    padding: 10px 0px;
+  `}
 `;
 
 class Bars extends React.Component {

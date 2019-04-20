@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Image from '../components/image';
 import TrackVisibility from 'react-on-screen';
+import { media } from '../styles/global'
 
 const Title = styled.div`
   font-size: 2.4rem;
@@ -13,6 +14,15 @@ const Title = styled.div`
   word-wrap: break-word;
   white-space: normal;
   line-height: 30px;
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    font-size: 3vw;
+    line-height: 1;
+    letter-spacing: 0.1em;
+  `}
 `;
 
 const Progress = styled.div`
@@ -35,6 +45,14 @@ const Progress = styled.div`
     transition: ${props =>
       props.isVisible ? 'width 1s linear' : 'width 0.3s linear'};
   }
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    margin-top: 4px;
+    box-shadow: 0 2px 15px 0 rgba(7, 33, 66, 0.12);
+  `}
 `;
 
 const Year = styled.div`
@@ -44,12 +62,31 @@ const Year = styled.div`
   margin-left: 0.8rem;
   letter-spacing: 0.2em;
   line-height: 30px;
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    margin-left: 0;
+    font-size: 2.1vw;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    width: 100%;
+  `}
 `;
 
 const Logo = styled.div`
   width: 11%;
   align-self: center;
   margin-right: 30px;
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    width: 8vw;
+    margin-right: 10px;
+  `}
 `;
 
 const Container = styled.div`
@@ -67,6 +104,12 @@ const Detail = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   position: relative;
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+  `}
 `;
 
 const Skill = props => {

@@ -1,12 +1,12 @@
-import React from "react"
-import HeaderFixed from "../components/header-fixed"
-import CardFull from "../components/card-full"
-import ButtonBack from "../components/button-back"
-import ButtonBackBlack from "../components/button-back-black"
-import Titletext from "../components/sections/title-text"
-import Bars from "../components/Bars"
-import SubTitleText from "../components/subTitleText"
-import Image from "../components/image"
+import React from 'react';
+import HeaderFixed from '../components/header-fixed';
+import CardFull from '../components/card-full';
+import ButtonBack from '../components/button-back';
+import ButtonBackBlack from '../components/button-back-black';
+import Titletext from '../components/sections/title-text';
+import Bars from '../components/Bars';
+import SubTitleText from '../components/subTitleText';
+import Image from '../components/image';
 import {
   ContainerFloat,
   Wrapper,
@@ -20,8 +20,8 @@ import {
   ImageFull,
   Title,
   ImageIcon,
-  FooterBack
-} from "../styles/global"
+  FooterBack,
+} from '../styles/global';
 
 class App extends React.Component {
   render() {
@@ -31,14 +31,14 @@ class App extends React.Component {
         <ButtonBack
           url="/#portalfinance"
           style={{
-            position: "fixed",
-            top: "122px",
-            left: "42px",
+            position: 'fixed',
+            top: '122px',
+            left: '42px',
           }}
         />
-        <Section right style={{ backgroundColor: "#020b16" }}>
+        <Section right style={{ backgroundColor: '#020b16' }}>
           <CardFull isVisible={true} imageUrl="portalfinance/background.jpg" />
-          <ContainerFloat style={{ marginTop: "-41px" }}>
+          <ContainerFloat>
             <Titletext text="PortalFinance" isVisible={true} />
             <Bars isVisible={true} />
             <SubTitleText text="Fintech" isVisible={true} delay={530} />
@@ -48,28 +48,34 @@ class App extends React.Component {
 
         <SectionPage>
           <SectionHeader>
-            <SubTitle>ROLE</SubTitle>
-            <SubTitle>DATE</SubTitle>
-            <SubTitle>OVERVIEW</SubTitle>
-            <Text>Front-End Developer</Text>
-            <Text>DIC 2017</Text>
-            <Text>PortalFinance - Landing Page</Text>
+            <div>
+              <SubTitle>ROLE</SubTitle>
+              <Text>Front-End Developer</Text>
+            </div>
+            <div>
+              <SubTitle>DATE</SubTitle>
+              <Text>DIC 2017</Text>
+            </div>
+            <div>
+              <SubTitle>OVERVIEW</SubTitle>
+              <Text>PortalFinance - Landing Page</Text>
+            </div>
           </SectionHeader>
           <ImageFull
-            style={{ width: "calc(100% - 100px)", margin: "50px auto" }}
+            style={{ width: 'calc(100% - 100px)', margin: '50px auto' }}
           >
             <Image
               filename="mockup-portalfinance.png"
-              style={{ marginTop: "10px" }}
+              style={{ marginTop: '10px' }}
             />
           </ImageFull>
           <SectionText>
             <Title>Features</Title>
             <div>
-              <Text style={{ padding: "0px 60px 0 30px", fontStyle: "italic" }}>
+              <Text style={{ padding: '0px 60px 0 30px', fontStyle: 'italic' }}>
                 PortalFinance Landing Page
               </Text>
-              <Text style={{ padding: "0px 60px 0 30px", fontStyle: "italic" }}>
+              <Text style={{ padding: '0px 60px 0 30px', fontStyle: 'italic' }}>
                 - Profiles: Financial, Supplier, Allied Debtor
               </Text>
             </div>
@@ -83,13 +89,13 @@ class App extends React.Component {
           <SectionText>
             <Title>Development</Title>
             <div>
-              <Text style={{ padding: "0px 60px 0 30px" }}>
+              <Text style={{ padding: '0px 60px 0 30px' }}>
                 Landing page en tiempo record (2 días) para demos con los
                 inversionistas. Es una sitio web con una sola pagina con scroll
                 que muestra información descriptiva de los servicio que ofrece
                 la compañia.
               </Text>
-              <Text style={{ padding: "0px 60px 0 30px" }}>
+              <Text style={{ padding: '0px 60px 0 30px' }}>
                 Se uso React pasa su desarrollo por la simplicidad de crear
                 componentes y con un segundo propposito de dar a conocer al
                 equipo de Front-End lo rápido y facil que es crear aplicaciones
@@ -119,12 +125,12 @@ class App extends React.Component {
           </SectionIcons>
           <div
             style={{
-              width: "100%",
-              backgroundColor: "#f2f4f5",
-              padding: "10px 0 140px",
+              width: '100%',
+              backgroundColor: '#f2f4f5',
+              padding: '10px 0 140px',
             }}
           >
-            <ImageFull style={{ width: "60%", margin: "50px auto" }}>
+            <ImageFull style={{ width: '60%', margin: '50px auto' }}>
               <Image
                 filename="portalfinance-page.png"
                 alt="Portal Finance Full Page"
@@ -133,7 +139,7 @@ class App extends React.Component {
           </div>
           <SectionText>
             <Title>Tasks</Title>
-            <div style={{ padding: "0px 60px 0 30px" }}>
+            <div style={{ padding: '0px 60px 0 30px' }}>
               <Text>
                 - Desarrollar, diseñar e implementar components, layout and
                 animations
@@ -149,8 +155,8 @@ class App extends React.Component {
           </FooterBack>
         </SectionPage>
       </Wrapper>
-    )
+    );
   }
 }
 
-export default App
+export default App;

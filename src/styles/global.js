@@ -37,7 +37,6 @@ export const Section = styled.section`
   transition: width 0.1s;
 
   ${media.desktop`
-  padding: ${props => (props.right ? '0 0 0 145px' : '0 100px 0 145px')};
   `}
   ${media.tablet`
   `}
@@ -45,14 +44,15 @@ export const Section = styled.section`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: ${props => (props.right ? '100vw' : 'calc(100vw - 50px)')};
-    padding: ${props => (props.right ? '0 0 0 25px' : '0 20px 0 25px')};
+    width: 100vw;
+    padding: 0;
   `}
 `;
 
 export const ContainerFloat = styled.div`
   position: absolute;
   width: 50%;
+  min-height: 210px;
   ${media.desktop`
   `}
   ${media.tablet`
@@ -60,6 +60,7 @@ export const ContainerFloat = styled.div`
   ${media.phone`
     width: 100%;
     bottom: 15%;
+    padding-left: 25px;
   `}
 `;
 
@@ -96,6 +97,13 @@ export const SectionPage = styled.section`
   width: 100vw;
   padding-top: 7.2rem;
   position: relative;
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    padding-top: 2rem;
+  `}
 `;
 
 export const Title = styled.h1`
@@ -119,6 +127,18 @@ export const Title = styled.h1`
     left: 0;
     margin: auto;
   }
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    font-size: 7vw;
+    padding-left: 5rem;
+    margin-top: 2rem;
+    &:before {
+      width: 3.8rem;
+    }
+  `}
 `;
 
 export const SubTitle = styled.h3`
@@ -141,6 +161,14 @@ export const Text = styled.p`
   line-height: 2;
   word-wrap: break-word;
   white-space: normal;
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    font-size: 3.5vw;
+    margin: 6px 0 0 15px;
+  `}
 `;
 
 export const SectionHeader = styled.div`
@@ -150,6 +178,14 @@ export const SectionHeader = styled.div`
   grid-template-columns: auto auto auto;
   grid-gap: 5px;
   grid-auto-rows: minmax(30px, auto);
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    grid-template-columns: auto;
+    grid-gap: 15px;
+  `}
 `;
 
 export const ImageFull = styled.div`
@@ -164,6 +200,15 @@ export const SectionText = styled.section`
   grid-auto-rows: minmax(30px, auto);
   align-items: center;
   margin: 140px 0px;
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    grid-template-columns: auto;
+    grid-gap: 15px;
+    margin: 60px 0px;
+  `}
 `;
 
 export const SectionIcons = styled.section`
@@ -176,6 +221,15 @@ export const SectionIcons = styled.section`
   align-items: center;
   justify-items: center;
   justify-content: center;
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    width: calc(100% - 80px);
+    padding: 100px 40px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  `}
 `;
 
 export const ImageIcon = styled.div`

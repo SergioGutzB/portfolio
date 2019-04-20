@@ -21,6 +21,7 @@ import {
   Title,
   ImageIcon,
   FooterBack,
+  media,
 } from '../styles/global';
 import Skill from '../components/skill';
 import styled from 'styled-components';
@@ -32,6 +33,15 @@ const Skills = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 50px;
+  ${media.desktop`
+  `}
+  ${media.tablet`
+  `}
+  ${media.phone`
+    width: calc(100% - 30px);
+    margin: 60px auto 100px;
+    grid-gap: 40px;
+  `}
 `;
 
 class About extends React.Component {
@@ -48,7 +58,7 @@ class About extends React.Component {
           }}
         />
         <Section right style={{ backgroundColor: '#020b16' }}>
-          <CardFull isVisible={true} imageUrl="about/perspective-about.png" />
+          <CardFull isVisible={true} imageUrl="about/back1.jpg" />
           <ContainerFloat style={{ marginTop: '-41px' }}>
             <Titletext text="About Me" isVisible={true} />
             <Bars isVisible={true} />
@@ -218,7 +228,7 @@ class About extends React.Component {
           </div>
           <FooterBack>
             <ButtonBackBlack url="/#about" text="BACK" />
-            <a href="mailto:sergut18@gmail.com" style={{marginTop: '40px'}}>
+            <a href="mailto:sergut18@gmail.com" style={{ marginTop: '40px' }}>
               <Text>sergut18@gmail.com</Text>
             </a>
           </FooterBack>
