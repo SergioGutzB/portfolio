@@ -18,7 +18,7 @@ const Button = styled.button`
   line-height: 1;
   transform: ${props =>
     props.isVisible ? 'translateX(0)' : 'translateX(-400px)'};
-  transition: all 0.8s ease-out 0.3s;
+  transition: transform 0.8s ease-out 0.3s;
   a {
   }
   &:hover {

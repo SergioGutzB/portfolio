@@ -17,7 +17,7 @@ const CardDiv = styled.div`
     props.isVisible
       ? 'translate(0, 0) scale(1)'
       : 'translate(10%, 0) scale(0.8)'};
-  transition: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transition 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   ${media.desktop`
   `}
   ${media.tablet`

@@ -42,7 +42,7 @@ const Nav = styled.div`
   z-index: 2000;
   overflow: hidden;
   height: ${props => (props.open ? '100vh' : '0')};
-  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: height 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 `;
 
 const MenuIcon = styled.div`
@@ -59,12 +59,12 @@ const MenuIcon = styled.div`
     background: #fff;
     position: absolute;
     right: 0;
-    transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     bottom: ${props => (props.open ? '50%' : '0')};
     transform: ${props =>
       props.open
         ? 'rotate(-45deg) translate3d(0, 50%, 0)'
         : 'rotate(0deg) translate3d(0, 0, 0)'};
+    transition: transform 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   }
   &:after {
     content: '';
@@ -73,12 +73,12 @@ const MenuIcon = styled.div`
     background: #fff;
     position: absolute;
     right: 0;
-    transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     top: ${props => (props.open ? '50%' : '0')};
     transform: ${props =>
       props.open
         ? 'rotate(45deg) translate3d(0, -50%, 0)'
         : 'rotate(0deg) translate3d(0, 0, 0)'};
+    transition: transform 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   }
   ${media.desktop`
   `}

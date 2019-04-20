@@ -12,7 +12,7 @@ const SubText = styled.div`
   margin-top: 10px;
   transform: ${props =>
     props.isVisible ? 'translateX(0)' : 'translateX(-300px)'};
-  transition: all 0.8s ease-out 0.2s;
+  transition: transform 0.8s ease-out 0.2s;
   ${media.desktop`
   `}
   ${media.tablet`

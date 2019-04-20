@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Spring } from 'react-spring/renderprops';
 import styled from 'styled-components';
 import { media } from '../styles/global';
 
@@ -11,6 +10,12 @@ const Bar = styled.span`
   width: 88px;
   background-color: #ff4d5a;
   margin-top: 10px;
+  opacity: ${props => (props.isVisible ? 1 : 0)};
+  margin-right: ${props => (props.isVisible && props.right ? '0' : '50px')};
+  margin-left: ${props => (props.isVisible && props.left ? '50px' : '0')};
+  transform: ${props =>
+    props.isVisible ? 'translateX(0)' : 'translateX(-208px)'};
+  transition: all 0.8s ease-out 0.3s;
   ${media.desktop`
   `}
   ${media.tablet`
@@ -38,38 +43,8 @@ class Bars extends React.Component {
     const { isVisible } = this.props;
     return (
       <BarContainer>
-        <Spring
-          delay={500}
-          config={{
-            clamp: true,
-            friction: 40,
-          }}
-          to={{
-            opacity: isVisible ? 1 : 0,
-            marginRight: isVisible ? '0px' : '50px',
-            transform: isVisible ? 'translateX(0)' : 'translateX(-208px)',
-          }}
-        >
-          {props => (
-            <div style={{ position: 'relative' }}>
-              <Bar style={{ ...props }} />
-            </div>
-          )}
-        </Spring>
-        <Spring
-          delay={500}
-          to={{
-            opacity: isVisible ? 1 : 0,
-            marginLeft: isVisible ? '50px' : '0px',
-            transform: isVisible ? 'translateX(0)' : 'translateX(-208px)',
-          }}
-        >
-          {props => (
-            <div>
-              <Bar style={{ ...props }} />
-            </div>
-          )}
-        </Spring>
+        <Bar isVisible={isVisible} right={true} />
+        <Bar isVisible={isVisible} left={true} />
       </BarContainer>
     );
   }

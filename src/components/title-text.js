@@ -12,7 +12,7 @@ const Textani = styled.h1`
   line-height: 1;
   transform: ${props =>
     props.isVisible ? 'translateX(0)' : 'translateX(-700px)'};
-  transition: all 0.8s ease-out;
+  transition: transform 0.8s ease-out;
   ${media.desktop`
   `}
   ${media.tablet`
