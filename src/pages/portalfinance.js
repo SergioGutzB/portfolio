@@ -22,6 +22,7 @@ import {
   ImageIcon,
   FooterBack,
 } from '../styles/global';
+import ScrollDown from '../components/scrolldown';
 
 class App extends React.Component {
   render() {
@@ -44,6 +45,7 @@ class App extends React.Component {
             <SubTitleText text="Fintech" isVisible={true} delay={530} />
             <SubTitleText text="website" isVisible={true} delay={560} />
           </ContainerFloat>
+          <ScrollDown />
         </Section>
 
         <SectionPage>

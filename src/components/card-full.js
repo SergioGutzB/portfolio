@@ -5,47 +5,49 @@ import Image from './image';
 
 const animationCard = keyframes`
   0% {
-    marginRight: 0;
-    height: 74.2%;
+    margin-right: 245px;
+    height: 74.1%;
+    width: 53.3%;
   }
   100% {
-    marginRight: -100px;
+    margin-right: 160px;
     height: 100%;
+    width: 60%;
   }
 `;
 
 const animationCardPhone = keyframes`
   0% {
-    height: 74.2%;
-    width: 72.5%;
+    margin-top: 70px;
+    height: 55vh;
+    width: 84%;
   }
   100% {
-    height: 65%;
+    margin-top: 0;
+    height: 64.2%;
     width: 100%;
   }
 `;
 
 const CardDiv = styled.div`
-  margin-left: auto;
-  margin-right: 0px;
+  margin: 0 auto;
   box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
   background-color: #4d4d4d;
   position: relative;
   overflow: hidden;
-  width: 72.5%;
-  animation: ${animationCard} 0.5s linear 0s forwards;
+  animation: ${animationCard} 0.6s ease-out 0s forwards;
   ${media.desktop`
   `}
   ${media.tablet`
   `}
   ${media.phone`
-    animation: ${animationCardPhone} 0.5s linear 0s forwards;
+    animation: ${animationCardPhone} 0.6s ease-out 0s forwards;
   `}
 `;
 function Card(props) {
   const { imageUrl } = props;
   return (
-    <CardDiv style={props}>
+    <CardDiv>
       <Image
         filename={imageUrl}
         styles={{
@@ -54,7 +56,6 @@ function Card(props) {
           top: 0,
           width: '100%',
           height: '100%',
-          transition: 'width 0.4s',
         }}
       />
       <Filter />

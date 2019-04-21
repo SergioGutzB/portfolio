@@ -58,8 +58,8 @@ export const ContainerFloat = styled.div`
   ${media.tablet`
   `}
   ${media.phone`
+    bottom: 10%;
     width: 100%;
-    bottom: 15%;
     padding-left: 25px;
   `}
 `;
