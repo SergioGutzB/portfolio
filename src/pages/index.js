@@ -9,8 +9,9 @@ import HeaderFixed from "../components/header-fixed"
 import ElBanderin from "../components/sections/elbanderin"
 import Volaires from "../components/sections/volaires"
 import Moonlightsvg from "../assets/moonlight.svg"
+import About from '../components/sections/about'
 
-const anchors = ["hero", "omnibnk", "portalfinance", "elbanderin", "volaires"]
+const anchors = ["hero", "omnibnk", "portalfinance", "elbanderin", "volaires", "about"]
 const fullpageOptions = {
   licenseKey: "F03741B9-DB594A2F-8DCD815F-57D360E2",
   anchors,
@@ -78,11 +79,12 @@ class App extends React.Component {
             const show = destination ? destination.index + 1 : 1
             return (
               <Fullpage id="fullpage-wrapper">
-                <Hero section={show} index={1} />
+                <Hero section={show} index={1}/>
                 <Omnibnk section={show} index={2} />
                 <PortalFinance section={show} index={3} />
                 <ElBanderin section={show} index={4} />
                 <Volaires section={show} index={5} />
+                <About section={show} index={6} />
               </Fullpage>
             )
           }}

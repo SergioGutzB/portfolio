@@ -42,6 +42,14 @@ module.exports = {
             family: `Roboto`,
             variants: [`300`, `400`, `500`, `700`, `900`]
           },
+          {
+            family: `Abril Fatface`,
+            variants: [`300`, `400`, `500`, `700`, `900`]
+          },
+          {
+            family: `Didact Gothic`,
+            variants: [`300`, `400`, `500`, `700`, `900`]
+          },
         ],
       },
     },

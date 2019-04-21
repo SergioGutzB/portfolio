@@ -7,7 +7,7 @@ import Card from "../card"
 import RaisedButton from "../button"
 import { Section, ContainerFloat } from '../../styles/global'
 
-class Volaires extends React.Component {
+class About extends React.Component {
   render() {
     const { section, index } = this.props
     const isVisible = section === index ? true : false
@@ -16,23 +16,20 @@ class Volaires extends React.Component {
         <Section>
           <Card
             isVisible={isVisible}
-            imageUrl="volaires/perspective-volaires.png"
-            year={2015}
+            imageUrl="about/back1.jpg"
+            year={2019}
           />
           <ContainerFloat>
-            <Titletext text="Volaires" isVisible={isVisible} delay={500} />
+            <Titletext text="About Me" isVisible={isVisible} />
             <Bars isVisible={isVisible} />
             <SubTitleText
-              text="Marketplace"
+              text="Me encanta la tecnología, la animación y el desarrollo de video juegos"
               isVisible={isVisible}
-              delay={600}
             />
-            <SubTitleText text="website" isVisible={isVisible} delay={700} />
             <RaisedButton
               text="Show me more"
               isVisible={isVisible}
-              delay={700}
-              url="/volaires/"
+              url="/about/"
             />
           </ContainerFloat>
         </Section>
@@ -41,10 +38,11 @@ class Volaires extends React.Component {
   }
 }
 
-Volaires.propTypes = {
+About.propTypes = {
   index: PropTypes.number,
   section: PropTypes.number,
   delay: PropTypes.number,
 }
 
-export default Volaires
+export default About
+

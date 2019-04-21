@@ -1,7 +1,6 @@
 import React from 'react';
 import HeaderFixed from '../components/header-fixed';
 import CardFull from '../components/card-full';
-import ButtonBack from '../components/button-back';
 import ButtonBackBlack from '../components/button-back-black';
 import Titletext from '../components/title-text';
 import Bars from '../components/bars';
@@ -28,16 +27,8 @@ class App extends React.Component {
   render() {
     return (
       <Wrapper>
-        <HeaderFixed />
-        <ButtonBack
-          url="/#portalfinance"
-          style={{
-            position: 'fixed',
-            top: '122px',
-            left: '42px',
-          }}
-        />
-        <Section right style={{ backgroundColor: '#020b16' }}>
+        <HeaderFixed url="/#portalfinance"/>
+        <Section right style={{ backgroundColor: '#020b16' }} className="firstSection">
           <CardFull isVisible={true} imageUrl="portalfinance/background.jpg" />
           <ContainerFloat>
             <Titletext text="PortalFinance" isVisible={true} />

@@ -22,21 +22,14 @@ import {
   ImageIcon,
   FooterBack
 } from "../styles/global"
+import ScrollDown from '../components/scrolldown';
 
 class Elbanderin extends React.Component {
   render() {
     return (
       <Wrapper>
-        <HeaderFixed />
-        <ButtonBack
-          url="/#volaires"
-          style={{
-            position: "fixed",
-            top: "122px",
-            left: "42px",
-          }}
-        />
-        <Section right style={{ backgroundColor: "#020b16" }}>
+        <HeaderFixed url="/#volaires"/>
+        <Section right style={{ backgroundColor: "#020b16" }} className="firstSection">
           <CardFull
             isVisible={true}
             imageUrl="volaires/perspective-volaires.png"
@@ -47,6 +40,7 @@ class Elbanderin extends React.Component {
             <SubTitleText text="Fintech" isVisible={true} delay={530} />
             <SubTitleText text="website" isVisible={true} delay={560} />
           </ContainerFloat>
+          <ScrollDown />
         </Section>
 
         <SectionPage>

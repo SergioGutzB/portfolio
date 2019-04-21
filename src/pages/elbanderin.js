@@ -1,7 +1,6 @@
 import React from "react"
 import HeaderFixed from "../components/header-fixed"
 import CardFull from "../components/card-full"
-import ButtonBack from "../components/button-back"
 import ButtonBackBlack from "../components/button-back-black"
 import Titletext from "../components/title-text"
 import Bars from "../components/bars"
@@ -22,21 +21,14 @@ import {
   ImageIcon,
   FooterBack,
 } from "../styles/global"
+import ScrollDown from '../components/scrolldown';
 
 class Elbanderin extends React.Component {
   render() {
     return (
       <Wrapper>
-        <HeaderFixed />
-        <ButtonBack
-          url="/#elbanderin"
-          style={{
-            position: "fixed",
-            top: "122px",
-            left: "42px",
-          }}
-        />
-        <Section right style={{ backgroundColor: "#020b16" }}>
+        <HeaderFixed url="/#elbanderin" />
+        <Section right style={{ backgroundColor: "#020b16" }} className="firstSection">
           <CardFull isVisible={true} imageUrl="elbanderin/background.png" />
           <ContainerFloat style={{ marginTop: "-41px" }}>
             <Titletext text="PortalFinance" isVisible={true} />
@@ -44,6 +36,7 @@ class Elbanderin extends React.Component {
             <SubTitleText text="Fintech" isVisible={true} delay={530} />
             <SubTitleText text="website" isVisible={true} delay={560} />
           </ContainerFloat>
+          <ScrollDown />
         </Section>
 
         <SectionPage>

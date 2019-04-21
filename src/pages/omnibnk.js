@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import HeaderFixed from "../components/header-fixed"
-import CardFull from "../components/card-full"
+import React from 'react';
+import styled from 'styled-components';
+import HeaderFixed from '../components/header-fixed';
+import CardFull from '../components/card-full';
 import {
   ContainerFloat,
   Wrapper,
@@ -16,13 +16,13 @@ import {
   Title,
   ImageIcon,
   FooterBack,
-} from "../styles/global"
-import ButtonBack from "../components/button-back"
-import ButtonBackBlack from "../components/button-back-black"
-import Titletext from "../components/title-text"
-import Bars from "../components/bars"
-import SubTitleText from "../components/sub-title-text"
-import Image from "../components/image"
+} from '../styles/global';
+import ButtonBackBlack from '../components/button-back-black';
+import Titletext from '../components/title-text';
+import Bars from '../components/bars';
+import SubTitleText from '../components/sub-title-text';
+import Image from '../components/image';
+import ScrollDown from '../components/scrolldown';
 
 const SectionIframes = styled.section`
   width: 100%;
@@ -33,37 +33,34 @@ const SectionIframes = styled.section`
   align-items: center;
   justify-content: center;
   height: 720px;
-`
+`;
 
 const Iframe = styled.iframe`
   border: none;
   width: 69%;
   height: 40vw;
   margin: 0 auto;
-`
+`;
 
 class App extends React.Component {
   render() {
     return (
       <Wrapper>
-        <HeaderFixed />
-        <ButtonBack
-          url="/#omnibnk"
-          style={{
-            position: "fixed",
-            top: "122px",
-            left: "42px",
-          }}
-        />
-        <Section right style={{ backgroundColor: "#020b16" }}>
+        <Section
+          right
+          style={{ backgroundColor: '#020b16' }}
+          className="firstSection"
+        >
           <CardFull isVisible={true} imageUrl="perspective-omni.png" />
-          <ContainerFloat style={{ marginTop: "-41px" }}>
+          <ContainerFloat style={{ marginTop: '-41px' }}>
             <Titletext text="Omni|Bnk" isVisible={true} />
             <Bars isVisible={true} />
             <SubTitleText text="Fintech" isVisible={true} delay={530} />
             <SubTitleText text="website" isVisible={true} delay={560} />
           </ContainerFloat>
+          <ScrollDown />
         </Section>
+        <HeaderFixed  url="/#omnibnk"/>
 
         <SectionPage>
           <SectionHeader>
@@ -75,20 +72,20 @@ class App extends React.Component {
             <Text>Plataforma financiera para hacer factoring y confirming</Text>
           </SectionHeader>
           <ImageFull
-            style={{ width: "calc(100% - 100px)", margin: "50px auto" }}
+            style={{ width: 'calc(100% - 100px)', margin: '50px auto' }}
           >
-            <Image filename="mockup-omni.png" style={{ marginTop: "10px" }} />
+            <Image filename="mockup-omni.png" style={{ marginTop: '10px' }} />
           </ImageFull>
           <SectionText>
             <Title>Features</Title>
             <div>
-              <Text style={{ padding: "0px 60px 0 30px", fontStyle: "italic" }}>
+              <Text style={{ padding: '0px 60px 0 30px', fontStyle: 'italic' }}>
                 "Somos la primera plataforma digital de soluciones financieras
                 de Latinoamérica, para empresas, que cambio las reglas a través
                 de un financiamiento rápido, transparente y con toda la libertad
                 que siempre quisiste".
               </Text>
-              <Text style={{ padding: "0px 60px 0 30px", fontStyle: "italic" }}>
+              <Text style={{ padding: '0px 60px 0 30px', fontStyle: 'italic' }}>
                 - Profiles: Financial, Supplier, Allied Debtor
               </Text>
             </div>
@@ -98,7 +95,7 @@ class App extends React.Component {
           </ImageFull>
           <SectionText>
             <Title>Development</Title>
-            <Text style={{ padding: "0px 60px 0 30px" }}>
+            <Text style={{ padding: '0px 60px 0 30px' }}>
               Plataforma web SPA desarrollada con Angular 6 junto con Ngrx
               (Redux) para administrar nuestros datos de aplicación. Apoyamos
               nuestra hoja de estilos sobre Angular Material para agilizar el
@@ -139,7 +136,7 @@ class App extends React.Component {
           </SectionIframes>
           <SectionText>
             <Title>Tasks</Title>
-            <div style={{ padding: "0px 60px 0 30px" }}>
+            <div style={{ padding: '0px 60px 0 30px' }}>
               <Text>
                 - Crear, diseñar, modificar templates Angular Material
               </Text>
@@ -158,8 +155,8 @@ class App extends React.Component {
           </FooterBack>
         </SectionPage>
       </Wrapper>
-    )
+    );
   }
 }
 
-export default App
+export default App;

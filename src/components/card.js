@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from './image';
 import { Filter, media } from '../styles/global';
+import YearUp from './year-up'
 
 const CardDiv = styled.div`
   margin: 0 0 0 auto;
@@ -52,7 +53,7 @@ const CoverBlue = styled(Cover)`
 `;
 
 function Card(props) {
-  const { isVisible, imageUrl, filter } = props;
+  const { isVisible, imageUrl, filter, year } = props;
   return (
     <CardDiv isVisible={isVisible}>
       <Image
@@ -69,6 +70,7 @@ function Card(props) {
       <div>
         <Cover isVisible={isVisible} />
         <CoverBlue isVisible={isVisible} />
+        <YearUp year={year} isVisible={isVisible}/>
       </div>
     </CardDiv>
   );

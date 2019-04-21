@@ -1,7 +1,6 @@
 import React from 'react';
 import HeaderFixed from '../components/header-fixed';
 import CardFull from '../components/card-full';
-import ButtonBack from '../components/button-back';
 import ButtonBackBlack from '../components/button-back-black';
 import Titletext from '../components/title-text';
 import Bars from '../components/bars';
@@ -21,6 +20,7 @@ import {
 } from '../styles/global';
 import Skill from '../components/skill';
 import styled from 'styled-components';
+import ScrollDown from '../components/scrolldown';
 
 const Skills = styled.div`
   width: 90%;
@@ -43,16 +43,8 @@ class About extends React.Component {
   render() {
     return (
       <Wrapper>
-        <HeaderFixed />
-        <ButtonBack
-          url="/#about"
-          style={{
-            position: 'fixed',
-            top: '122px',
-            left: '42px',
-          }}
-        />
-        <Section right style={{ backgroundColor: '#020b16' }}>
+        <HeaderFixed  url="/#about"/>
+        <Section right style={{ backgroundColor: '#020b16' }} className="firstSection">
           <CardFull isVisible={true} imageUrl="about/back1.jpg" />
           <ContainerFloat style={{ marginTop: '-41px' }}>
             <Titletext text="About Me" isVisible={true} />
@@ -63,6 +55,7 @@ class About extends React.Component {
               delay={530}
             />
           </ContainerFloat>
+          <ScrollDown />
         </Section>
 
         <SectionPage>
