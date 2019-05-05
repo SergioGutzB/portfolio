@@ -16,7 +16,7 @@ const fullpageOptions = {
   licenseKey: "F03741B9-DB594A2F-8DCD815F-57D360E2",
   anchors,
   callbacks: ["onLeave"],
-  scrollOverflow: true,
+  scrollOverflow: false,
   navigation: true,
   navigationTooltips: anchors,
   onLeave: (origin, destination, direction) => {
