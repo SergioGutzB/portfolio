@@ -11,12 +11,18 @@ import Volaires from "../components/sections/volaires"
 import Moonlightsvg from "../assets/moonlight.svg"
 import About from '../components/sections/about'
 
+// NOTE: if using fullpage extensions/plugins put them here and pass it as props
+const pluginWrapper = () => {
+  require('fullpage.js/vendors/scrolloverflow');
+};
+
 const anchors = ["hero", "omnibnk", "portalfinance", "elbanderin", "volaires", "about"]
 const fullpageOptions = {
+  pluginWrapper,
   licenseKey: "F03741B9-DB594A2F-8DCD815F-57D360E2",
   anchors,
   callbacks: ["onLeave"],
-  scrollOverflow: false,
+  scrollOverflow: true,
   navigation: true,
   navigationTooltips: anchors,
   onLeave: (origin, destination, direction) => {
