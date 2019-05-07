@@ -6,7 +6,6 @@ import SubTitleText from '../sub-title-text';
 import Card from '../card';
 import RaisedButton from '../button';
 import { Section, ContainerFloat } from '../../styles/global';
-import YearUp from '../year-up';
 
 class PortalFinance extends React.Component {
   render() {

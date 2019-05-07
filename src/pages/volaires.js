@@ -1,7 +1,6 @@
 import React from "react"
 import HeaderFixed from "../components/header-fixed"
 import CardFull from "../components/card-full"
-import ButtonBack from "../components/button-back"
 import ButtonBackBlack from "../components/button-back-black"
 import Titletext from "../components/title-text"
 import Bars from "../components/bars"
