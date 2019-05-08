@@ -74,6 +74,10 @@ const MoonLightWrap = styled.div`
 
 class App extends React.Component {
 
+  componentDidMount() {
+    require('fullpage.js/vendors/scrolloverflow');
+  }
+
   render() {
     return (
       <Linear>
