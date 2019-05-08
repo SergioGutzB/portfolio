@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { Section, media } from '../../styles/global';
 import styled from 'styled-components';
 import Bars from '../bars';
 import Titletext from '../title-text';
 import SubTitleText from '../sub-title-text';
-import { Section, media } from '../../styles/global';
 
 const Row = styled.div`
   display: flex;
@@ -48,53 +48,48 @@ const Portfolio = styled.h3`
   `}
 `;
 
-class Hero extends React.Component {
-  state = {
-    isVisible: false,
-  };
+const Hero = props => {
+  const [isVisible, setIsVisible] = useState(false);
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({
-      isVisible: nextProps.index === nextProps.section ? true : false,
-    });
-  }
-  render() {
-    const { isVisible } = this.state;
-    return (
-      <div className="section">
-        <Section>
-          <Row style={{paddingLeft: '35px'}}>
-            <Titletext text="SERGIO" isVisible={isVisible} delay={500} />
-            <Titletext text="GUTIERREZ" isVisible={isVisible} delay={500} />
-            <Bars isVisible={isVisible} />
-            <SubTitleText
-              text="front-end developer /"
-              isVisible={isVisible}
-              delay={600}
-            />
-            <SubTitleText
-              text="system engineer"
-              isVisible={isVisible}
-              delay={700}
-            />
-          </Row>
-          <Row>
-            <div
-              style={{
-                flex: 'auto',
-                display: 'flex',
-                alignItems: 'center',
-                width: '100%',
-              }}
-            >
-              <Portfolio isVisible={isVisible}>PORTFOLIO</Portfolio>
-            </div>
-          </Row>
-        </Section>
-      </div>
-    );
-  }
-}
+  useEffect(() => {
+    console.log('props: ', props)
+    setIsVisible(props.section === props.index ? true : false);
+  }, [props.section]);
+
+  return (
+    <div className="section">
+      <Section>
+        <Row style={{ paddingLeft: '35px' }}>
+          <Titletext text="SERGIO" isVisible={isVisible} delay={500} />
+          <Titletext text="GUTIERREZ" isVisible={isVisible} delay={500} />
+          <Bars isVisible={isVisible} />
+          <SubTitleText
+            text="front-end developer /"
+            isVisible={isVisible}
+            delay={600}
+          />
+          <SubTitleText
+            text="system engineer"
+            isVisible={isVisible}
+            delay={700}
+          />
+        </Row>
+        <Row>
+          <div
+            style={{
+              flex: 'auto',
+              display: 'flex',
+              alignItems: 'center',
+              width: '100%',
+            }}
+          >
+            <Portfolio isVisible={isVisible}>PORTFOLIO</Portfolio>
+          </div>
+        </Row>
+      </Section>
+    </div>
+  );
+};
 
 Hero.propTypes = {
   index: PropTypes.number,

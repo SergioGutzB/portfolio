@@ -7,11 +7,10 @@ import Card from '../card';
 import RaisedButton from '../button';
 import { Section, ContainerFloat } from '../../styles/global';
 
-class Omnibnk extends React.Component {
-  render() {
-    const { section, index } = this.props;
+const Omnibnk = (props) => {
+    const { section, index } = props;
     const isVisible = section === index ? true : false;
-    const props = { text: 'Omni|Bnk', isVisible, reverse: true };
+    const props2 = { text: 'Omni|Bnk', isVisible, reverse: true };
     return (
       <div className="section">
         <Section>
@@ -21,7 +20,7 @@ class Omnibnk extends React.Component {
             year={2018}
           />
           <ContainerFloat>
-            <Titletext {...props} />
+            <Titletext {...props2} />
             <Bars isVisible={isVisible} />
             <SubTitleText text="Fintech" isVisible={isVisible} delay={530} />
             <SubTitleText text="website" isVisible={isVisible} delay={560} />
@@ -35,7 +34,6 @@ class Omnibnk extends React.Component {
         </Section>
       </div>
     );
-  }
 }
 
 Omnibnk.propTypes = {
