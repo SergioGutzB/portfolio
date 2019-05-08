@@ -1,11 +1,11 @@
-import React from "react"
-import HeaderFixed from "../components/header-fixed"
-import CardFull from "../components/card-full"
-import ButtonBackBlack from "../components/button-back-black"
-import Titletext from "../components/title-text"
-import Bars from "../components/bars"
-import SubTitleText from "../components/sub-title-text"
-import Image from "../components/image"
+import React from 'react';
+import HeaderFixed from '../components/header-fixed';
+import CardFull from '../components/card-full';
+import ButtonBackBlack from '../components/button-back-black';
+import Titletext from '../components/title-text';
+import Bars from '../components/bars';
+import SubTitleText from '../components/sub-title-text';
+import Image from '../components/image';
 import {
   ContainerFloat,
   Wrapper,
@@ -19,21 +19,25 @@ import {
   ImageFull,
   Title,
   ImageIcon,
-  FooterBack
-} from "../styles/global"
+  FooterBack,
+} from '../styles/global';
 import ScrollDown from '../components/scrolldown';
 
 class Elbanderin extends React.Component {
   render() {
     return (
       <Wrapper>
-        <HeaderFixed url="/#volaires"/>
-        <Section right style={{ backgroundColor: "#020b16" }} className="firstSection">
+        <HeaderFixed url="/#volaires" />
+        <Section
+          right
+          style={{ backgroundColor: '#020b16' }}
+          className="firstSection"
+        >
           <CardFull
             isVisible={true}
             imageUrl="volaires/perspective-volaires.png"
           />
-          <ContainerFloat style={{ marginTop: "-41px" }}>
+          <ContainerFloat style={{ marginTop: '-41px' }}>
             <Titletext text="Volaires" isVisible={true} />
             <Bars isVisible={true} />
             <SubTitleText text="Fintech" isVisible={true} delay={530} />
@@ -52,26 +56,19 @@ class Elbanderin extends React.Component {
             <Text>MarketPlace Planes</Text>
           </SectionHeader>
           <ImageFull
-            style={{ width: "calc(100% - 100px)", margin: "50px auto" }}
+            style={{ width: 'calc(100% - 100px)', margin: '50px auto' }}
           >
             <Image
               filename="volaires/mockup-volaires.png"
-              style={{ marginTop: "10px" }}
+              style={{ marginTop: '10px' }}
             />
           </ImageFull>
           <SectionText>
             <Title>Features</Title>
             <div>
-              <Text style={{ padding: "0px 60px 0 30px" }}>
-                El Banderin otro punto de Vista. El futlbol visto desde las
-                cuatro esquinas. Hinchas, técnicos, jugadores y periodistas.
-              </Text>
-              <Text style={{ padding: "0px 60px 0 30px" }}>
-                Sitio de noticias de futbol moderno, con un diseño adaptativo,
-                configurable que integra el administrador de contenido dentro
-                del front-end final. Permitiendo a los editores, creadores de
-                contenido y administradores ver una nueva publicacion en tiempo
-                real tal y como la vería el usuario.
+              <Text style={{ padding: '0px 60px 0 30px' }}>
+                Tourism market, where you could find tickets, plans, cars, and
+                profile of the gamified user.
               </Text>
             </div>
           </SectionText>
@@ -84,26 +81,17 @@ class Elbanderin extends React.Component {
           <SectionText>
             <Title>Development</Title>
             <div>
-              <Text style={{ padding: "0px 60px 0 30px" }}>
-                El Front-End ha sido desarrollado sobre React, Mobx y Nextjs
-                junto a otras librerias que contribuyeron aún desarrollo rapido
-                y eficiente:
+              <Text style={{ padding: '5px 60px 0 30px' }}>
+                - Back-end developed with Django, together with Java modules for
+                the SOAP connection with the Global Distribution System.
               </Text>
-              <Text style={{ padding: "5px 60px 0 30px" }}>
-                - Mobx administra el store de datos de la aplicación (User,
-                authenticación)
+              <Text style={{ padding: '0px 60px 0 30px' }}>
+                - Fronted developed in AngularJS and integrated into the backend
+                by means of Django's own templates.
               </Text>
-              <Text style={{ padding: "5px 60px 0 30px" }}>
-                - React-Motion para crear la animaciones de los paneles
-                (administradores de contenido y tópicos).
-              </Text>
-              <Text style={{ padding: "0px 60px 0 30px" }}>
-                - React-dropzone para arrastar y soltar las imagenes al momento
-                de crear tópicos, noticias, equipos.
-              </Text>
-              <Text style={{ padding: "0px 60px 0 30px" }}>
-                - Con Styled-component se crearon estilos simples y
-                reutilizables que se pueden llamar como componentes.
+              <Text style={{ padding: '0px 60px 0 30px' }}>
+                - New modules (Plans) developed with Django and ReactJs and
+                Mobx.
               </Text>
             </div>
           </SectionText>
@@ -120,26 +108,26 @@ class Elbanderin extends React.Component {
           </SectionIcons>
           <div
             style={{
-              width: "100%",
-              backgroundColor: "#f2f4f5",
-              padding: "10px 0 140px",
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-around",
+              width: '100%',
+              backgroundColor: '#f2f4f5',
+              padding: '10px 0 140px',
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'space-around',
             }}
           >
             <ImageFull
               style={{
-                width: "40%",
-                margin: "0 2% 0 auto",
+                width: '40%',
+                margin: '0 2% 0 auto',
               }}
             >
               <Image filename="volaires/page1.jpg" alt="Volaires - home" />
             </ImageFull>
             <ImageFull
               style={{
-                width: "40%",
-                margin: "0 auto 0 2%",
+                width: '40%',
+                margin: '0 auto 0 2%',
               }}
             >
               <Image filename="volaires/page2.jpg" alt="Volaires - planes" />
@@ -147,30 +135,19 @@ class Elbanderin extends React.Component {
           </div>
           <SectionText>
             <Title>Tasks</Title>
-            <div style={{ padding: "0px 60px 0 30px" }}>
+            <div style={{ padding: '0px 60px 0 30px' }}>
+              <Text>- Continue with the development of the plans module.</Text>
+              <Text>- Refactoring styles of the application in general.</Text>
               <Text>
-                - Crear y configurar proyecto con react, nextjs y mobx
+                - Decouple Angular 1 front-end as templates from the back-end
+                with Django.
               </Text>
+              <Text>- Create module of Plans with react.</Text>
+              <Text>- Create the user profile module.</Text>
               <Text>
-                - Definir theme y guia de stilos globales (radium ->
-                styled-component)
+                - Create module of com map in D3JS and location of tourist
+                points.
               </Text>
-              <Text>
-                - Crear componentes reutilizables (Collapse panels, arrows,
-                layouts, buttons, toggle buttons, temas, topics, news)
-              </Text>
-              <Text>
-                - Definir, desarrollar e implementar servicios para hacer
-                peticiones al api back-end (Ruby on Rails)
-              </Text>
-              <Text>
-                - Definir y crear auth store para la autenticación por token.
-                (ServerCookies, LocalCookies)
-              </Text>
-              <Text>
-                - Integrar API de Facebook (Singin, share post and comments)
-              </Text>
-              <Text>- Deploy Site con AWS EC2 con un Servidor de Node.</Text>
             </div>
           </SectionText>
           <FooterBack>
@@ -178,8 +155,8 @@ class Elbanderin extends React.Component {
           </FooterBack>
         </SectionPage>
       </Wrapper>
-    )
+    );
   }
 }
 
-export default Elbanderin
+export default Elbanderin;

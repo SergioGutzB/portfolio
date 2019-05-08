@@ -27,8 +27,12 @@ class App extends React.Component {
   render() {
     return (
       <Wrapper>
-        <HeaderFixed url="/#portalfinance"/>
-        <Section right style={{ backgroundColor: '#020b16' }} className="firstSection">
+        <HeaderFixed url="/#portalfinance" />
+        <Section
+          right
+          style={{ backgroundColor: '#020b16' }}
+          className="firstSection"
+        >
           <CardFull isVisible={true} imageUrl="portalfinance/background.jpg" />
           <ContainerFloat>
             <Titletext text="PortalFinance" isVisible={true} />
@@ -83,16 +87,15 @@ class App extends React.Component {
             <Title>Development</Title>
             <div>
               <Text style={{ padding: '0px 60px 0 30px' }}>
-                Landing page en tiempo record (2 días) para demos con los
-                inversionistas. Es una sitio web con una sola pagina con scroll
-                que muestra información descriptiva de los servicio que ofrece
-                la compañia.
+                Landing page in record time (2 days) for demos with investors.
+                It is a website with a single page with scroll that shows
+                descriptive information of the services offered by the company.
               </Text>
               <Text style={{ padding: '0px 60px 0 30px' }}>
-                Se uso React pasa su desarrollo por la simplicidad de crear
-                componentes y con un segundo propposito de dar a conocer al
-                equipo de Front-End lo rápido y facil que es crear aplicaciones
-                con react.
+                It was used React passes its development for the simplicity of
+                creating components and with a second purpose of making known to
+                the Front-End team how fast and easy it is to create
+                applications with react.
               </Text>
             </div>
           </SectionText>
@@ -134,12 +137,12 @@ class App extends React.Component {
             <Title>Tasks</Title>
             <div style={{ padding: '0px 60px 0 30px' }}>
               <Text>
-                - Desarrollar, diseñar e implementar components, layout and
+                - Develop, design and implement components, layout and
                 animations
               </Text>
               <Text>
-                - Desarrollar, deplegar landing pages SPA (React - HTML -
-                Javascript)
+                - Develop, design and implement components, layout and
+                animations)
               </Text>
             </div>
           </SectionText>

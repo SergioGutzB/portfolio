@@ -114,7 +114,7 @@ export const Title = styled.h1`
   margin-right: 3.2rem;
   position: relative;
   padding-left: 6.2rem;
-  margin-top: 5rem;
+  margin-top: 0;
   text-transform: uppercase;
   &:before {
     content: '';
@@ -198,7 +198,7 @@ export const SectionText = styled.section`
   grid-template-columns: auto auto;
   grid-gap: 5px;
   grid-auto-rows: minmax(30px, auto);
-  align-items: center;
+  align-items: flex-start;
   margin: 140px 0px;
   ${media.desktop`
   `}

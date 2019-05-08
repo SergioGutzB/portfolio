@@ -15,6 +15,7 @@ import {
   Text,
   ImageFull,
   Title,
+  SubTitle,
   FooterBack,
   media,
 } from '../styles/global';
@@ -39,18 +40,38 @@ const Skills = styled.div`
   `}
 `;
 
+const Futures = styled.div`
+  width: calc(100% - 160px);
+  padding: 50px 0 100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 100px;
+`;
+
+const Future = styled.div`
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`;
+
 class About extends React.Component {
   render() {
     return (
       <Wrapper>
-        <HeaderFixed  url="/#about"/>
-        <Section right style={{ backgroundColor: '#020b16' }} className="firstSection">
+        <HeaderFixed url="/#about" />
+        <Section
+          right
+          style={{ backgroundColor: '#020b16' }}
+          className="firstSection"
+        >
           <CardFull isVisible={true} imageUrl="about/back1.jpg" />
           <ContainerFloat style={{ marginTop: '-41px' }}>
             <Titletext text="About Me" isVisible={true} />
             <Bars isVisible={true} />
             <SubTitleText
-              text="Me encanta la tecnología, la animación y el desarrollo de video juegos"
+              text="I love technology, development and any technique of visualization"
               isVisible={true}
               delay={530}
             />
@@ -60,22 +81,81 @@ class About extends React.Component {
 
         <SectionPage>
           <SectionText>
-            <Title>Quién Soy</Title>
+            <Title>WHO I AM</Title>
             <div>
-              <Text style={{ padding: '0px 60px 0 30px' }}>
-                Nacido en la cidudad de Bogotá en 1988. Graduado de ingeniero de
-                sistemas de la universidad Distrital Francisco José de Caldas.
-                Años antes de entrar a la universidad ya me interesaba el mundo
-                del desarrollo y diseño, realicé mis primeras paginas web y
-                juegos pequeños con Flash y Action Script.
+              <Text style={{ padding: '0px 70px 0 35%' }}>
+                Born in the city of Bogota in 1988. Graduated as an engineer
+                Systems of the Francisco José de Caldas District University. My
+                career has been guided by the development of web applications
+                and Specialized as front-end developer during the last 3 years
               </Text>
-              <Text style={{ padding: '0px 60px 0 30px' }}>
-                Despues de graduarme he trabajado en varias compañias como
-                Desarrollar web full-stack. En los dos ultimos años me he
-                especializado como desarrollador front-end.
+              <Text style={{ padding: '0px 70px 0 35%' }}>
+                I started to develop my first applications in a way. Self-taught
+                before starting college. Develop some web pages in flash with
+                actionscript 3, which led me appropriate design skills and
+                applications like Photoshop and illustrator.
               </Text>
             </div>
           </SectionText>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignContent: 'center',
+              width: '70%',
+              margin: '0 auto',
+              position: 'relative',
+              padding: '0 0 120px',
+            }}
+          >
+            <Future style={{ alignItems: 'center' }}>
+              <Image filename="skills.png" styles={{ width: '150px' }} />
+              <SubTitle style={{ margin: '30px 0' }}>Skills</SubTitle>
+              <Text>Proactive &#8626;</Text>
+              <Text>Autodidact &#8626;</Text>
+              <Text>Continuous learning &#10003;</Text>
+            </Future>
+            <Future style={{ alignItems: 'center' }}>
+              <Image filename="weaknesses.png" styles={{ width: '150px' }} />
+              <SubTitle style={{ margin: '30px 0' }}>Weaknesses</SubTitle>
+              <Text>Demanding &#8614; leadership - delegation</Text>
+              <Text>
+                <strong>NO</strong> it's also an answer !&#8614; Evaluate,
+                viability
+              </Text>
+              <Text>Ingles &#8599;</Text>
+            </Future>
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              width: '100%',
+              position: 'relative',
+            }}
+          >
+            <Title>The future</Title>
+            <Futures>
+              <Future>
+                <SubTitle>Short term</SubTitle>
+                <Text>Train me personally and professionally.</Text>
+                <Text>Speak English.</Text>
+              </Future>
+              <Future>
+                <SubTitle>Medium term</SubTitle>
+                <Text>Train me personally and professionally.</Text>
+                <Text>Machine learning, data visualization.</Text>
+              </Future>
+              <Future>
+                <SubTitle>Long term</SubTitle>
+                <Text>Committed to the company.</Text>
+                <Text>Climb professionally.</Text>
+                <Text>New leadership challenges.</Text>
+              </Future>
+            </Futures>
+          </div>
           <ImageFull>
             <Image
               filename="about/perspective-about.png"
@@ -90,7 +170,7 @@ class About extends React.Component {
               position: 'relative',
             }}
           >
-            <Title>Conjunto de Habilidades</Title>
+            <Title>Technical Skills</Title>
             <Skills>
               <Skill
                 label="HTML/CSS"

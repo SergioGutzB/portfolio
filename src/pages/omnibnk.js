@@ -60,7 +60,7 @@ class App extends React.Component {
           </ContainerFloat>
           <ScrollDown />
         </Section>
-        <HeaderFixed  url="/#omnibnk"/>
+        <HeaderFixed url="/#omnibnk" />
 
         <SectionPage>
           <SectionHeader>
@@ -69,7 +69,7 @@ class App extends React.Component {
             <SubTitle>OVERVIEW</SubTitle>
             <Text>Front-End Developer</Text>
             <Text>SEP 2017 - NOW</Text>
-            <Text>Plataforma financiera para hacer factoring y confirming</Text>
+            <Text>Financial platform for factoring and confirming</Text>
           </SectionHeader>
           <ImageFull
             style={{ width: 'calc(100% - 100px)', margin: '50px auto' }}
@@ -80,10 +80,10 @@ class App extends React.Component {
             <Title>Features</Title>
             <div>
               <Text style={{ padding: '0px 60px 0 30px', fontStyle: 'italic' }}>
-                "Somos la primera plataforma digital de soluciones financieras
-                de Latinoamérica, para empresas, que cambio las reglas a través
-                de un financiamiento rápido, transparente y con toda la libertad
-                que siempre quisiste".
+                "We are the first digital platform for financial solutions in
+                Latin America, for companies, which changed the rules through
+                fast, transparent financing and with all the freedom you always
+                wanted.".
               </Text>
               <Text style={{ padding: '0px 60px 0 30px', fontStyle: 'italic' }}>
                 - Profiles: Financial, Supplier, Allied Debtor
@@ -96,10 +96,10 @@ class App extends React.Component {
           <SectionText>
             <Title>Development</Title>
             <Text style={{ padding: '0px 60px 0 30px' }}>
-              Plataforma web SPA desarrollada con Angular 6 junto con Ngrx
-              (Redux) para administrar nuestros datos de aplicación. Apoyamos
-              nuestra hoja de estilos sobre Angular Material para agilizar el
-              desarollo, no reinventamos la rueda.
+              SPA web platform developed with Angular 6 together with Ngrx
+              (Redux) to manage our application data. We support our stylesheet
+              on Angular Material to streamline the development, we do not
+              reinvent the wheel.
             </Text>
           </SectionText>
           <SectionIcons>
@@ -137,16 +137,12 @@ class App extends React.Component {
           <SectionText>
             <Title>Tasks</Title>
             <div style={{ padding: '0px 60px 0 30px' }}>
+              <Text>- Create, design, modify templates Angular Material</Text>
               <Text>
-                - Crear, diseñar, modificar templates Angular Material
+                - Develop, design and implement components, layouts and views
               </Text>
               <Text>
-                - Desarrollar, diseñar e implementar components, layouts and
-                views
-              </Text>
-              <Text>
-                - Desarrollar, deplegar landing pages SPA (React - HTML -
-                Javascript)
+                - Develop, deploy landing pages SPA (React - HTML - Javascript)
               </Text>
             </div>
           </SectionText>

@@ -1,12 +1,12 @@
-import React from "react"
-import HeaderFixed from "../components/header-fixed"
-import CardFull from "../components/card-full"
-import ButtonBackBlack from "../components/button-back-black"
-import Titletext from "../components/title-text"
-import Bars from "../components/bars"
-import SubTitleText from "../components/sub-title-text"
-import { ContainerFloat } from "../styles/global"
-import Image from "../components/image"
+import React from 'react';
+import HeaderFixed from '../components/header-fixed';
+import CardFull from '../components/card-full';
+import ButtonBackBlack from '../components/button-back-black';
+import Titletext from '../components/title-text';
+import Bars from '../components/bars';
+import SubTitleText from '../components/sub-title-text';
+import { ContainerFloat } from '../styles/global';
+import Image from '../components/image';
 import {
   Wrapper,
   Section,
@@ -20,7 +20,7 @@ import {
   Title,
   ImageIcon,
   FooterBack,
-} from "../styles/global"
+} from '../styles/global';
 import ScrollDown from '../components/scrolldown';
 
 class Elbanderin extends React.Component {
@@ -28,9 +28,13 @@ class Elbanderin extends React.Component {
     return (
       <Wrapper>
         <HeaderFixed url="/#elbanderin" />
-        <Section right style={{ backgroundColor: "#020b16" }} className="firstSection">
+        <Section
+          right
+          style={{ backgroundColor: '#020b16' }}
+          className="firstSection"
+        >
           <CardFull isVisible={true} imageUrl="elbanderin/background.png" />
-          <ContainerFloat style={{ marginTop: "-41px" }}>
+          <ContainerFloat style={{ marginTop: '-41px' }}>
             <Titletext text="PortalFinance" isVisible={true} />
             <Bars isVisible={true} />
             <SubTitleText text="Fintech" isVisible={true} delay={530} />
@@ -46,29 +50,28 @@ class Elbanderin extends React.Component {
             <SubTitle>OVERVIEW</SubTitle>
             <Text>Front-End Developer</Text>
             <Text>JUL 2017</Text>
-            <Text>Sitio de Noticias de Futboll</Text>
+            <Text>Soccer News Site</Text>
           </SectionHeader>
           <ImageFull
-            style={{ width: "calc(100% - 100px)", margin: "50px auto" }}
+            style={{ width: 'calc(100% - 100px)', margin: '50px auto' }}
           >
             <Image
               filename="elbanderin/mockup-elbanderin.png"
-              style={{ marginTop: "10px" }}
+              style={{ marginTop: '10px' }}
             />
           </ImageFull>
           <SectionText>
             <Title>Features</Title>
             <div>
-              <Text style={{ padding: "0px 60px 0 30px" }}>
-                El Banderin otro punto de Vista. El futlbol visto desde las
-                cuatro esquinas. Hinchas, técnicos, jugadores y periodistas.
+              <Text style={{ padding: '0px 60px 0 30px' }}>
+                The Banderin another point of view. The football seen from the
+                four corners. Fans, technicians, players and journalists.
               </Text>
-              <Text style={{ padding: "0px 60px 0 30px" }}>
-                Sitio de noticias de futbol moderno, con un diseño adaptativo,
-                configurable que integra el administrador de contenido dentro
-                del front-end final. Permitiendo a los editores, creadores de
-                contenido y administradores ver una nueva publicacion en tiempo
-                real tal y como la vería el usuario.
+              <Text style={{ padding: '0px 60px 0 30px' }}>
+                Modern football news site, with an adaptive, configurable design
+                that integrates the content manager within the final front-end.
+                Allowing editors, content creators and administrators to see a
+                new publication in real time as the user would see it.
               </Text>
             </div>
           </SectionText>
@@ -81,26 +84,26 @@ class Elbanderin extends React.Component {
           <SectionText>
             <Title>Development</Title>
             <div>
-              <Text style={{ padding: "0px 60px 0 30px" }}>
-                El Front-End ha sido desarrollado sobre React, Mobx y Nextjs
-                junto a otras librerias que contribuyeron aún desarrollo rapido
-                y eficiente:
+              <Text style={{ padding: '0px 60px 0 30px' }}>
+                - The Front-End has been developed on React, Mobx and Nextjs along
+                with other libraries that contributed to a fast and efficient
+                development:
               </Text>
-              <Text style={{ padding: "5px 60px 0 30px" }}>
-                - Mobx administra el store de datos de la aplicación (User,
-                authenticación)
+              <Text style={{ padding: '5px 60px 0 30px' }}>
+                - Mobx manages the data store of the application (User,
+                authentication)
               </Text>
-              <Text style={{ padding: "5px 60px 0 30px" }}>
-                - React-Motion para crear la animaciones de los paneles
-                (administradores de contenido y tópicos).
+              <Text style={{ padding: '5px 60px 0 30px' }}>
+                - React-Motion to create the animations of the panels (content
+                managers and topics).
               </Text>
-              <Text style={{ padding: "0px 60px 0 30px" }}>
-                - React-dropzone para arrastar y soltar las imagenes al momento
-                de crear tópicos, noticias, equipos.
+              <Text style={{ padding: '0px 60px 0 30px' }}>
+                - React-dropzone to drag and drop the images when creating
+                topics, news, equipment.
               </Text>
-              <Text style={{ padding: "0px 60px 0 30px" }}>
-                - Con Styled-component se crearon estilos simples y
-                reutilizables que se pueden llamar como componentes.
+              <Text style={{ padding: '0px 60px 0 30px' }}>
+                - Styled-component created simple and reusable styles that can be
+                called as components.
               </Text>
             </div>
           </SectionText>
@@ -123,18 +126,18 @@ class Elbanderin extends React.Component {
           </SectionIcons>
           <div
             style={{
-              width: "100%",
-              backgroundColor: "#f2f4f5",
-              padding: "10px 0 140px",
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-around",
+              width: '100%',
+              backgroundColor: '#f2f4f5',
+              padding: '10px 0 140px',
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'space-around',
             }}
           >
             <ImageFull
               style={{
-                width: "40%",
-                margin: "0 2% 0 auto",
+                width: '40%',
+                margin: '0 2% 0 auto',
               }}
             >
               <Image
@@ -144,8 +147,8 @@ class Elbanderin extends React.Component {
             </ImageFull>
             <ImageFull
               style={{
-                width: "40%",
-                margin: "0 auto 0 2%",
+                width: '40%',
+                margin: '0 auto 0 2%',
               }}
             >
               <Image
@@ -156,24 +159,24 @@ class Elbanderin extends React.Component {
           </div>
           <SectionText>
             <Title>Tasks</Title>
-            <div style={{ padding: "0px 60px 0 30px" }}>
+            <div style={{ padding: '0px 60px 0 30px' }}>
               <Text>
-                - Crear y configurar proyecto con react, nextjs y mobx
+                - Create and configure project with react, nextjs and mobx
               </Text>
               <Text>
-                - Definir theme y guia de stilos globales (radium ->
+                - Define theme and global style guide (radium ->
                 styled-component)
               </Text>
               <Text>
-                - Crear componentes reutilizables (Collapse panels, arrows,
-                layouts, buttons, toggle buttons, temas, topics, news)
+                - Create reusable components (Collapse panels, arrows, layouts,
+                buttons, toggle buttons, themes, topics, news)
               </Text>
               <Text>
-                - Definir, desarrollar e implementar servicios para hacer
-                peticiones al api back-end (Ruby on Rails)
+                - Define, develop and implement services to make requests to the
+                api back-end (Ruby on Rails)
               </Text>
               <Text>
-                - Definir y crear auth store para la autenticación por token.
+                - Define and create auth store for token authentication.
                 (ServerCookies, LocalCookies)
               </Text>
               <Text>
@@ -187,8 +190,8 @@ class Elbanderin extends React.Component {
           </FooterBack>
         </SectionPage>
       </Wrapper>
-    )
+    );
   }
 }
 
-export default Elbanderin
+export default Elbanderin;

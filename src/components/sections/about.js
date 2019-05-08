@@ -23,7 +23,7 @@ class About extends React.Component {
             <Titletext text="About Me" isVisible={isVisible} />
             <Bars isVisible={isVisible} />
             <SubTitleText
-              text="Me encanta la tecnología, la animación y el desarrollo de video juegos"
+              text="Me encanta la tecnología, la animación, y cualquier técnica de vizualización"
               isVisible={isVisible}
             />
             <RaisedButton
